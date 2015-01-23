@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="addgroup.tpl" server="w4.texus.lt" local="130664834127006090" remote="130664713200000000" Dst="1" />
+<file name="addprop.tpl" server="w4.texus.lt" local="130664834127706120" remote="130664713200000000" Dst="1" />
+<file name="addprop2.tpl" server="w4.texus.lt" local="130664834127716132" remote="130664713200000000" Dst="1" />
+<file name="adduser1.tpl" server="w4.texus.lt" local="130664834128306163" remote="130664713200000000" Dst="1" />
+<file name="adduser2.tpl" server="w4.texus.lt" local="130664834128916223" remote="130664713200000000" Dst="1" />
+<file name="admin_authtab.tpl" server="w4.texus.lt" local="130664834128996190" remote="130664713200000000" Dst="1" />
+<file name="adminprefs.tpl" server="w4.texus.lt" local="130664834129536227" remote="130664713200000000" Dst="1" />
+<file name="editmessages.tpl" server="w4.texus.lt" local="130664834130166258" remote="130664713200000000" Dst="1" />
+<file name="admintasks.tpl" server="w4.texus.lt" local="130664834130226259" remote="130664713200000000" Dst="1" />
+<file name="edituserprops.tpl" server="w4.texus.lt" local="130664834130716405" remote="130664713200000000" Dst="1" />
+<file name="error.tpl" server="w4.texus.lt" local="130664834131236436" remote="130664713200000000" Dst="1" />
+<file name="forgotpw_templateform.tpl" server="w4.texus.lt" local="130664834131306440" remote="130664713200000000" Dst="1" />
+<file name="group_xml.tpl" server="w4.texus.lt" local="130664834131726347" remote="130664713200000000" Dst="1" />
+<file name="grouplist.tpl" server="w4.texus.lt" local="130664834132866426" remote="130664713200000000" Dst="1" />
+<file name="importgroup.tpl" server="w4.texus.lt" local="130664834132876414" remote="130664713200000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834131736349" remote="130664713200000000" Dst="1" />
+<file name="lostun_templateform.tpl" server="w4.texus.lt" local="130664834133516448" remote="130664713200000000" Dst="1" />
+<file name="orig_changesettings.tpl" server="w4.texus.lt" local="130664834133686576" remote="130664713200000000" Dst="1" />
+<file name="orig_forgotpassword1.tpl" server="w4.texus.lt" local="130664834133686576" remote="130664713200000000" Dst="1" />
+<file name="orig_forgotpassword2.tpl" server="w4.texus.lt" local="130664834134266492" remote="130664713200000000" Dst="1" />
+<file name="orig_forgotpassword3.tpl" server="w4.texus.lt" local="130664834134766522" remote="130664713200000000" Dst="1" />
+<file name="orig_loginform.tpl" server="w4.texus.lt" local="130664834134936660" remote="130664713200000000" Dst="1" />
+<file name="orig_logoutform.tpl" server="w4.texus.lt" local="130664834135466562" remote="130664713200000000" Dst="1" />
+<file name="orig_lostunform_confirm_template.tpl" server="w4.texus.lt" local="130664834136076598" remote="130664713200000000" Dst="1" />
+<file name="orig_lostunform_template.tpl" server="w4.texus.lt" local="130664834136136599" remote="130664713200000000" Dst="1" />
+<file name="orig_notification_template.tpl" server="w4.texus.lt" local="130664834136616630" remote="130664713200000000" Dst="1" />
+<file name="orig_resetsession_template.tpl" server="w4.texus.lt" local="130664834137306667" remote="130664713200000000" Dst="1" />
+<file name="orig_viewuser_template.tpl" server="w4.texus.lt" local="130664834137306667" remote="130664713200000000" Dst="1" />
+<file name="propertiesform.tpl" server="w4.texus.lt" local="130664834137916712" remote="130664713200000000" Dst="1" />
+<file name="resetsession_templateform.tpl" server="w4.texus.lt" local="130664834138576854" remote="130664713200000000" Dst="1" />
+<file name="templateform.tpl" server="w4.texus.lt" local="130664834138576854" remote="130664713200000000" Dst="1" />
+<file name="userhistory.tpl" server="w4.texus.lt" local="130664834139176775" remote="130664713200000000" Dst="1" />
+<file name="userlist.tpl" server="w4.texus.lt" local="130664834139796813" remote="130664713200000000" Dst="1" />
+<file name="usermessages.tpl" server="w4.texus.lt" local="130664834139856814" remote="130664713200000000" Dst="1" />
+<file name="viewuser_templateform.tpl" server="w4.texus.lt" local="130664834140406849" remote="130664713200000000" Dst="1" />
+</dwsync>

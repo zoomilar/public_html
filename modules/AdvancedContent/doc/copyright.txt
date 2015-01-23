@@ -1,0 +1,33 @@
+The module uses external libaries and code snippets that are listed below:
+
+################################################################################
+
+jQuery Form Plugin
+version: 2.43 (12-MAR-2010)
+
+Examples and documentation at: http://malsup.com/jquery/form/
+Dual licensed under the MIT and GPL licenses:
+  http://www.opensource.org/licenses/mit-license.php
+  http://www.gnu.org/licenses/gpl.html
+
+################################################################################
+
+jPicker 1.1.6
+jQuery Plugin for Photoshop style color picker
+Copyright (c) 2010 Christopher T. Tillman
+Digital Magic Productions, Inc. (http://www.digitalmagicpro.com/)
+MIT style license, FREE to use, alter, copy, sell, and especially ENHANCE
+Painstakingly ported from John Dyers' excellent work on his own color picker based on the Prototype framework.
+John Dyers' website: (http://johndyer.name)
+Color Picker page:   (http://johndyer.name/post/2007/09/PhotoShop-like-JavaScript-Color-Picker.aspx)
+
+################################################################################
+
+Depend Class v0.1b : attach class based on first class in list of current element
+File: jquery.dependClass.js
+Copyright (c) 2009 Egor Hmelyoff, hmelyoff@gmail.com
+
+################################################################################
+
+jQuery Slider Plugin
+Egor Khmelev - http://blog.egorkhmelev.com/ - hmelyoff@gmail.com

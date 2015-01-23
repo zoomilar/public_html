@@ -1,0 +1,2 @@
+<h3 class="f_14">Klauskite mūsų!</h3>
+<p>Jeigu iškilo neaiškumų, turite papildomų klausimų apie produktą, ar norite pasikonsultuoti su specialistais, užpildykite kairėje esančią anketą ir su Jumis bus susisiekta!</p>

@@ -1,0 +1,1 @@
+<!-- Add code here that should appear in the content block of all new pages -->

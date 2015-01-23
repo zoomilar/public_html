@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="action.add_edit_front.php" server="w4.texus.lt" local="130664834020059950" remote="130664712600000000" Dst="1" />
+<file name="action.ajax.php" server="w4.texus.lt" local="130664834020109973" remote="130664712600000000" Dst="1" />
+<file name="Filelists.module.php" server="w4.texus.lt" local="130664834020139976" remote="130664712600000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834020729992" remote="130664712600000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834020789993" remote="130664712600000000" Dst="1" />
+<file name="action.delete_front.php" server="w4.texus.lt" local="130664834021360028" remote="130664712600000000" Dst="1" />
+<file name="action.deletefilelist.php" server="w4.texus.lt" local="130664834021990093" remote="130664712600000000" Dst="1" />
+<file name="action.download_export.php" server="w4.texus.lt" local="130664834022030065" remote="130664712600000000" Dst="1" />
+<file name="action.editfilelist.php" server="w4.texus.lt" local="130664834022530100" remote="130664712600000000" Dst="1" />
+<file name="action.my_filelists.php" server="w4.texus.lt" local="130664834023120126" remote="130664712600000000" Dst="1" />
+<file name="action.save_admin_prefs.php" server="w4.texus.lt" local="130664834023180132" remote="130664712600000000" Dst="1" />
+<file name="action.save_record.php" server="w4.texus.lt" local="130664834023650257" remote="130664712600000000" Dst="1" />
+<file name="action.view_front.php" server="w4.texus.lt" local="130664834024230197" remote="130664712600000000" Dst="1" />
+<file name="filelists.js" server="w4.texus.lt" local="130664834024300323" remote="130664712600000000" Dst="1" />
+<file name="function.admin_filelists.php" server="w4.texus.lt" local="130664834024900234" remote="130664712600000000" Dst="1" />
+<file name="function.admin_prefstab.php" server="w4.texus.lt" local="130664834025410258" remote="130664712600000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834024900234" remote="130664712600000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834055902120" remote="130664712600000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834056512043" remote="130664712600000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834056582037" remote="130664712600000000" Dst="1" />
+</dwsync>

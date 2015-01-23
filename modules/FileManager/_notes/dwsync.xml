@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="FileManager.module.php" server="w4.texus.lt" local="130664833891632597" remote="130664712600000000" Dst="1" />
+<file name="action.admin_fileview.php" server="w4.texus.lt" local="130664833892322639" remote="130664712600000000" Dst="1" />
+<file name="action.changedir.php" server="w4.texus.lt" local="130664833892332637" remote="130664712600000000" Dst="1" />
+<file name="action.chmoddir.php" server="w4.texus.lt" local="130664833892352637" remote="130664712600000000" Dst="1" />
+<file name="action.chmodfile.php" server="w4.texus.lt" local="130664833892972676" remote="130664712600000000" Dst="1" />
+<file name="action.chmodfilewin.php" server="w4.texus.lt" local="130664833893032696" remote="130664712600000000" Dst="1" />
+<file name="action.copy.php" server="w4.texus.lt" local="130664833893042684" remote="130664712600000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664833893732717" remote="130664712600000000" Dst="1" />
+<file name="action.delete.php" server="w4.texus.lt" local="130664833893752717" remote="130664712600000000" Dst="1" />
+<file name="action.dropzone.php" server="w4.texus.lt" local="130664833894242750" remote="130664712600000000" Dst="1" />
+<file name="action.fileaction.php" server="w4.texus.lt" local="130664833894892904" remote="130664712600000000" Dst="1" />
+<file name="action.javascript.php" server="w4.texus.lt" local="130664833894892904" remote="130664712600000000" Dst="1" />
+<file name="action.filesform.php" server="w4.texus.lt" local="130664833894912782" remote="130664712600000000" Dst="1" />
+<file name="action.postletupload.php" server="w4.texus.lt" local="130664833894932788" remote="130664712600000000" Dst="1" />
+<file name="action.move.php" server="w4.texus.lt" local="130664833895622840" remote="130664712600000000" Dst="1" />
+<file name="action.newdir.php" server="w4.texus.lt" local="130664833895632828" remote="130664712600000000" Dst="1" />
+<file name="action.rename.php" server="w4.texus.lt" local="130664833896202863" remote="130664712600000000" Dst="1" />
+<file name="action.savesettings.php" server="w4.texus.lt" local="130664833896792893" remote="130664712600000000" Dst="1" />
+<file name="action.thumb.php" server="w4.texus.lt" local="130664833896843014" remote="130664712600000000" Dst="1" />
+<file name="action.unpack.php" server="w4.texus.lt" local="130664833897322927" remote="130664712600000000" Dst="1" />
+<file name="action.upload.php" server="w4.texus.lt" local="130664833897902954" remote="130664712600000000" Dst="1" />
+<file name="dunzip.php" server="w4.texus.lt" local="130664833897992974" remote="130664712600000000" Dst="1" />
+<file name="fileinfo.php" server="w4.texus.lt" local="130664833898482992" remote="130664712600000000" Dst="1" />
+<file name="filepicker.css" server="w4.texus.lt" local="130664833899023043" remote="130664712600000000" Dst="1" />
+<file name="filepicker.php" server="w4.texus.lt" local="130664833899513076" remote="130664712600000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664833993558512" remote="130664713200000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834009239332" remote="130664713200000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834009919371" remote="130664713200000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834010399431" remote="130664713200000000" Dst="1" />
+<file name="postletupload.php" server="w4.texus.lt" local="130664834010509416" remote="130664713200000000" Dst="1" />
+<file name="settings.php" server="w4.texus.lt" local="130664834011029433" remote="130664713200000000" Dst="1" />
+<file name="untgz.php" server="w4.texus.lt" local="130664834018969889" remote="130664713200000000" Dst="1" />
+<file name="uploadview.php" server="w4.texus.lt" local="130664834019440034" remote="130664713200000000" Dst="1" />
+</dwsync>

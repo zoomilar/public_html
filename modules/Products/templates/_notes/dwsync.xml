@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="add_attrib_set.tpl" server="w4.texus.lt" local="130664834586672403" remote="130664713800000000" Dst="1" />
+<file name="action.addproduct.php" server="w4.texus.lt" local="130664834586712531" remote="130664713800000000" Dst="1" />
+<file name="addcategoryfield.tpl" server="w4.texus.lt" local="130664834586712531" remote="130664713800000000" Dst="1" />
+<file name="admin_add_hierarchy_item.tpl" server="w4.texus.lt" local="130664834587382455" remote="130664713800000000" Dst="1" />
+<file name="admin_copyattribsets.tpl" server="w4.texus.lt" local="130664834587432478" remote="130664713800000000" Dst="1" />
+<file name="admin_hierarchy_tab.tpl" server="w4.texus.lt" local="130664834587442447" remote="130664713800000000" Dst="1" />
+<file name="admin_image.tpl" server="w4.texus.lt" local="130664834588002498" remote="130664713800000000" Dst="1" />
+<file name="admin_order_hierarchy_products.tpl" server="w4.texus.lt" local="130664834588052478" remote="130664713800000000" Dst="1" />
+<file name="admin_reorder_hierarchy.tpl" server="w4.texus.lt" local="130664834588052478" remote="130664713800000000" Dst="1" />
+<file name="categorylist.tpl" server="w4.texus.lt" local="130664834588662508" remote="130664713800000000" Dst="1" />
+<file name="copycategory.tpl" server="w4.texus.lt" local="130664834588692516" remote="130664713800000000" Dst="1" />
+<file name="dflt_templates.tpl" server="w4.texus.lt" local="130664834589192542" remote="130664713800000000" Dst="1" />
+<file name="edit_attribsets.tpl" server="w4.texus.lt" local="130664834589762694" remote="130664713800000000" Dst="1" />
+<file name="editcategory.tpl" server="w4.texus.lt" local="130664834589812585" remote="130664713800000000" Dst="1" />
+<file name="editcategoryfields.tpl" server="w4.texus.lt" local="130664834590252722" remote="130664713800000000" Dst="1" />
+<file name="editfielddef.tpl" server="w4.texus.lt" local="130664834590862641" remote="130664713800000000" Dst="1" />
+<file name="editproduct.tpl" server="w4.texus.lt" local="130664834590892722" remote="130664713800000000" Dst="1" />
+<file name="exportcsv.tpl" server="w4.texus.lt" local="130664834590902642" remote="130664713800000000" Dst="1" />
+<file name="fielddeflist.tpl" server="w4.texus.lt" local="130664834591532726" remote="130664713800000000" Dst="1" />
+<file name="importcsv.tpl" server="w4.texus.lt" local="130664834592652742" remote="130664713800000000" Dst="1" />
+<file name="importproducts.tpl" server="w4.texus.lt" local="130664834593222786" remote="130664713800000000" Dst="1" />
+<file name="orig_byhierarchy_template.tpl" server="w4.texus.lt" local="130664834593282778" remote="130664713800000000" Dst="1" />
+<file name="orig_categorylist_template.tpl" server="w4.texus.lt" local="130664834593282778" remote="130664713800000000" Dst="1" />
+<file name="orig_detail_template.tpl" server="w4.texus.lt" local="130664834593832841" remote="130664713800000000" Dst="1" />
+<file name="orig_frontendform_template.tpl" server="w4.texus.lt" local="130664834593952820" remote="130664713800000000" Dst="1" />
+<file name="orig_search_template.tpl" server="w4.texus.lt" local="130664834593952820" remote="130664713800000000" Dst="1" />
+<file name="orig_summary_template.tpl" server="w4.texus.lt" local="130664834594582851" remote="130664713800000000" Dst="1" />
+<file name="prefs.tpl" server="w4.texus.lt" local="130664834594642945" remote="130664713800000000" Dst="1" />
+<file name="productlist.tpl" server="w4.texus.lt" local="130664834594642945" remote="130664713800000000" Dst="1" />
+</dwsync>

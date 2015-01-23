@@ -1,0 +1,429 @@
+<br />
+<p><strong>Module releases</strong>...</p>
+<ul>
+	<li><p><strong>0.9.4.3 (Feb 2013):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- fixed autoloader issue [#7726]</p></li>
+					<li><p>- several minor template (cs/js) bugfixes</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li>
+						<p>
+							- code rewrite (following the forge guidelines)<br/>
+							Notice the changes to the AdvancedContent blocktype API!
+						</p>
+					</li>
+					<li><p>- removed uninstall action</p></li>
+					<li><p>- removed bulk action to change contenttype of multiple pages</p></li>
+					<li><p>- changed contenttype name from Content2 to advanced_content</p></li>
+					<li><p>- removed action to switch the URL params (should not be needed anymore)</p></li>
+					<li><p>- compatibility fixes for CMSms 1.11, 1.10 and 1.9</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.9.3 (Mar 2012):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- minor bugfixes</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li><p>- code rewrite</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.9.2 (Nov 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- removes event handler ContentPostRender if no AdvancedContent options are used</p></li>
+					<li><p>- compatibility bugfix for CMSms &gt; 1.10 and PHP &gt; 5.3.6</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.9.1 (Nov 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- minor bugfixes</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.9 (October 2011):</strong></p>
+		<ul>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- usage of jquery ui</p></li>
+				</ul>
+			</li>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- fixed error with options "FEU Params" and "Custom params"</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li><p>- code rewrite (content blocks are separate classes now)</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.8.1 (September 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- compatibility bugfix for CMSms 1.10</p></li>
+					<li><p>- fixed "Warning: Parameter [...] is not known by module FrontEndUsers" when redirecting unauthorized users and using custom url params. <br />(added options "FEU Params" and "Custom params")</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.8 / 0.6.5 (May 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- [#6265] (Call-time pass-by-reference warnings)</p></li>
+					<li><p>- missed param no_collapse</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- hide menu entry if no access to view the page</p></li>
+					<li><p>- inheritance of redirect params, expire date</p></li>
+					<li><p>- default settings for expire date</p></li>
+					<li><p>- added block_types slider/colorpicker (thanks to nicmare)</p></li>
+					<li><p>- added a warning when uninstalling the module</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.6.4 (Mar 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- [#6241] (Issue with param default)</p></li>
+					<li><p>fatal error in AdvancedContent.module.php</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.7.2 / 0.6.3 (Mar 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- [#5734] Parameter block_group is not known by module AdvancedContent</p></li>
+					<li><p>- [#6014] header problem with multi-input</p></li>
+					<li><p>- [#6038] content_image respectively block_type="image" doesn't work</p></li>
+					<li><p>- [#6039] template can't be switched</p></li>
+					<li><p>- [#6061] issue with the redirect for feu non match</p></li>
+					<li><p>- [#6095] Parameter sortable is not known </p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.7.1 (Nov 2010) / 0.6.3 (Mar 2011):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- fixed bug item #5651 (redirect if frontend user has no acces to that page did not work properly)</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added param feu_access</p></li>
+					<li><p>- added param feu_action</p></li>
+					<li><p>- added param collapse</p></li>
+					<li><p>- added param required</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.7 (Nov 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- compatibility bugfixes for CMSms 1.9+ (needs CMSms 1.9 minimum now)</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added param no_collapse</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.6.2 (Nov 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- minor bugfix (showed tabs of previous template when template was changed)</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.6.1 (Nov 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- several bugfixes</p></li>
+					<li><p>- compatibility bugfixes for CMSms 1.9</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added block_type multi_input</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.6 (Oct 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- several bugfixes</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added param block_group</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li><p>- Removed file picker (and associated block_types image/file) - use GBFilePicker instead.</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.5 (Sept 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>fixed bug item #5292 (memory issue)</p></li>
+					<li><p>fixed bug item #5254 (disable wysiwyg not working)</p></li>
+					<li><p>fixed bug item #5310 (urlonly not working)</p></li>
+					<li><p>fixed bug item #5311 (image paths not stored 'correctly')</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>added feature request #5261 (Add sort to image type - notice the change of param filter)</p></li>
+					<li><p>added params exclude_prefix, include_prefix, exclude_sufix, include_sufix</p></li>
+					<li><p>added feature request #5253 (Text input to define add params to redirect function)</p></li>
+					<li><p>added feature request #5240 (Default values of AdvancedContent page options)</p></li>
+					<li><p>added feature request #5241 (put FeuAccess in Blocktab)</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li><p>- AdvancedContent options are shown in separate tab</p></li>
+					<li><p>- Added new permission to manage the AdvancedContent options tab</p></li>
+					<li><p>- removed param filter (use new params instead)</p></li>
+					<li><p>- path to files are stored relative to the uploads dir</p></li>
+					<li><p>- param dir of block type file/image needs to be relative to the uploads dir only (there is no image uploads dir used anymore)</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.4.1 (August 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- #5151: fixed stylesheet issue with expand/collapse buttons of content blocks in IE/Safari.</p></li>
+					<li><p>- #5162: PHP warnings if backend users without permission "Manage All AdvancedContent Blocks" open an advanced content page and multiple content blocks of same name were used in template.</p></li>
+					<li><p>- fixed bug where extra fields could not be updated.</p></li>
+					<li><p>- fixed bug where feu access did not work.</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added param "delete" to let users delete files even if no permission "Modify Files"</p></li>
+					<li><p>- added param "create_dirs" to let users create_dirs even if no permission "Modify Files"</p></li>
+					<li><p>- added new blocktype "note" to create some single notes for your editors</p></li>
+				</ul>
+			</li>
+			<li><p>Misc:</p>
+				<ul>
+					<li><p>- removed dependency of FileManager</p></li>
+					<li><p>- block of type file or image stores relative url now</p></li>
+					<li><p>- block type image shows thumbnail in backend preview instead of full image</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.4 (July 2010):</strong></p>
+		<ul>
+			<li><p>Important notice:</p>
+				<ul>
+					<li><p>- changed param "type" to "block_type" since it interferes with {content_module} tag</p></li>
+				</ul>
+			</li>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- #5101: page_tab "options" was shown to users with no permission to edit page options if a content block was assigned to that tab.</p></li>
+					<li><p>- #5097: link to missing css removed</p></li>
+					<li><p>- fixed mime-type issue (added preference to toggle mime-type usage on/off)</p></li>
+					<li><p>- fixed path issue where thumbnails were not shown</p></li>
+					<li><p>- fixed compatibility with CMSms 1.8</p></li>
+					<li><p>- other minor bugfixes</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added MLE support</p></li>
+					<li><p>- added param "show_clock" to enable/disable the time dropdown of blocktypes "date" in backend</p></li>
+					<li><p>- added param "date_format" to format timestamp of blocktypes "date" in frontend</p></li>
+					<li><p>- added param "description"</p></li>
+					<li><p>- added bulk function to set all pages to AdvancedContent</p></li>
+					<li><p>- added compatibility with {content_module} tag</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.3.4 (June 2010):</strong></p>
+		<ul>
+			<li><p>Bugfixes:</p>
+				<ul>
+					<li><p>- #5045: When switching from Content -> Advanced Content lots of PHP errors</p></li>
+					<li><p>- #5056: page_tabs not working for users without permission "Manage All Content"</p></li>
+					<li><p>- #5073: incorrect display of files when opening filepicker</p></li>
+					<li><p>- fixed minor bug where the option "allow_none" of content blocks of type image/file was not shown when template has been edited</p></li>
+				</ul>
+			</li>
+			<li><p>Features:</p>
+				<ul>
+					<li><p>- added filemanagement and upload functions to content blocks of type image/file</p></li>
+					<li><p>- added breadcumbs to filepicker</p></li>
+					<li><p>- admins may browse the entire dir tree in filepicker file browser regardless of template params</p></li>
+					<li><p>- added mime type checking to get file type</p></li>
+					<li><p>- added rawurlencode in src attribs to display images with weird filenames.</p></li>
+				</ul>
+			</li>
+			<li><p>miscellaneous:</p>
+				<ul>
+					<li><p>- removed OOP stuff (private/public/protected) to gain more compatibility with PHP4</p></li>
+					<li><p>- changed ajax functions to return xml values</p></li>
+					<li><p>- removed usage of ImageManager once and for all. (caused only trouble)</p></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><p><strong>0.3.3 (June 2010):</strong></p>
+	<ul>
+		<li><p>Bugfixes:</p>
+			<ul>
+				<li><p>- alias was not always converted properly</p></li>
+				<li><p>- unsubmitted content got lost if switching from Content to AdvancedContent</p></li>
+			</ul>
+		</li>
+		<li><p>Features:</p>
+			<ul>
+				<li><p>- added start/end date</p></li>
+				<li><p>- removed timepicker; replaced by a simple dropdown</p></li>
+				<li><p>- compatibility with {content_image}</p></li>
+			</ul>
+		</li>
+	</ul>
+	<li><p><strong>0.3.2 (June 2010):</strong></p>
+		<ul>
+			<li><p>- fixed bug where changing back to default content type or changing template caused fatal errors</p></li>
+			<li><p>- fixed a bug with smarty processing when saving a page</p></li>
+			<li><p>- fixed a bug with preview tab</p></li>
+			<li><p>- re-added expand/collapse button to toggle content blocks in backend</p></li>
+			<li><p>- added params editor_groups/editor_users to specify certain users/groups that are allowed to edit certain blocks</p></li>
+			<li><p>- removed params selected/checked; use param default instead</p></li>
+			<li><p>- block ids will be converted from block name using core function munge_string_to_url (to remove special chars, whitespaces, umlauts etc.)</p></li>
+			<li><p>- fixed bug of blocktype dropdown/select_multiple where first item had an empty label if only the param "values" is used</p></li>
+			<li><p>- added some template vars of the frontend to be also accessible in backend (e.g.: \$page_alias)</p></li>
+			<li><p>- added param "allow_none" to all content block types to specify if the predefined default value will be used if no value is entered</p></li>
+			<li><p>- fixed bug where empty values were never be stored</p></li>
+			<li><p>- fixed bug where default value in frontend was ignored if the "allow_none" param was changed after an empty value has been stored</p></li>
+			<li><p>- added param "sortable_items" to create a sortable multiple select list (select list will result in a table with checkboxes; only order of selected items will be stored and showed at the top of the list; unselected items will be appended in that order they are placed in the template)</p></li>
+		</ul>
+	</li>
+	<li><p><strong>0.3.1 (May 2010):</strong></p>
+		<ul>
+			<li><p>- removed the reordering stuff for now (causes trouble at this time)</p></li>
+			<li><p>- removed the db stuff (params of content blocks that are defined in template won't be saved in module db table anymore -> hopefully speed up loading time)</p></li>
+			<li><p>- fixed a bug with duplicate content blocks</p></li>
+		</ul>
+	</li>
+	<li>
+		<p><strong>AdvancedContent 0.3 (May 2010):</strong></p>
+		<ul>
+			<li><p>- rewrite code</p></li>
+			<li><p>- bugfixes</p></li>
+			<li><p>- renamed to AdvancedContent</p></li>
+			<li><p>- using separate module template now to dsplay content blocks</p></li>
+			<li><p>- removed page alias inheritance</p></li>
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li><p><strong>XContent BETA 3 (April 2010 - discontinued):</strong></p>
+		<ul>
+			<li><p>- Major Bugfix (missing ";" and strange invisible invalid chars)</p></li>
+		</ul>
+	</li>
+	<li><p><strong>XContent BETA 2 (April 2010 - discontinued):</strong></p>
+		<ul>
+			<li><p>- fixed a bug with param "delimiter"</p></li>
+			<li><p>- fixed a bug with smarty processing</p></li>
+			<li><p>- added inheritance of "Show login form"</p></li>
+			<li><p>- added inheritance of page alias to add it as preffix; so if you have a page called "members" and select for each child page "inherit page alias" all child pages aliases will start with "members_"; makes filtering of menu entries with MenuManager param "excludepreffix" or "includepreffix" easier.</p></li>
+			<li><p>- minor bugfixes</p></li> 
+		</ul>
+	</li>
+	<li>
+		<p><strong>XContent BETA (April 2010):</strong> initial release</p>
+		<ul>
+			<li><p>- converted the single file into a module</p></li>
+			<li><p>- renamed params; see module help for more details</p></li>
+		</ul>
+	</li>
+</ul>
+<p><strong>Single file releases (discontinued)</strong>...</p>
+<ul>
+	<li>
+		<p><strong>1.4 (March 2010):</strong></p>
+		<ul>
+			<li><p>- cleanup code - (NaN)</p></li>
+			<li><p>- minor bugfixes - (NaN)</p></li>
+			<li><p>- added redirect page if feu is not logged in - (NaN)</p></li>
+			<li><p>- added inheritance of feu_access and redirect_page - (NaN)</p></li>
+			<li><p>- added param feu_access - (NaN)</p></li>
+			<li><p>- added param feu_action - (NaN)</p></li>
+			<li><p>- added param redirect_page - (NaN)</p></li>
+			<li><p>- added param block_only - (NaN)</p></li>
+			<li><p>- added smarty logic in backend - (JeremyBass)</p></li>
+			<li><p>- added param style - (JeremyBass)</p></li>
+			<li><p>- added param filter (filtering images in backend) - (JeremyBass)</p></li>
+			<li><p>- added param ImgMode (dropdown or ImageManager) - (JeremyBass)</p></li>
+			<li><p>- added param smartyOn (for processing smarty vars of the tempate in backend) - (JeremyBass)</p></li>
+		</ul>
+	</li>
+	<li><p><strong>1.3 (April 2009):</strong></p>
+		<ul>
+			<li><p>- CMSms 1.6.* ready - (NaN)</p></li>
+			<li><p>- added feu access option - (NaN)</p></li>
+		</ul>
+	</li>
+	<li>
+		<p><strong>1.2 (March 2009):</strong> initial release</p>
+		<ul>
+			<li><p>- A single file Content2.inc.php that needs to be placed in lib/classes/contenttypes.</p></li>
+			<li><p>- layout/options of backend panel can be controled by additional smarty params in the template; integrated the {content_image} tag - (mod by NaN)</p></li>
+		</ul>
+	</li>
+</ul>
+<br />

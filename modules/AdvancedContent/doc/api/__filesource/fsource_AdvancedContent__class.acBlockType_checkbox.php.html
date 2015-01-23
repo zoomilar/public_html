@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for class.acBlockType_checkbox.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file class.acBlockType_checkbox.php</h1>
+<p>Documentation is available at <a href="../AdvancedContent/_class.acBlockType_checkbox.php.html">class.acBlockType_checkbox.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-key">class&nbsp;</span><a href="../AdvancedContent/acBlockType_checkbox.html">acBlockType_checkbox</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../AdvancedContent/acContentBlockBase.html">acContentBlockBase</a></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../AdvancedContent/acBlockType_checkbox.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$content_obj</span><span class="src-sym">,&nbsp;</span><span class="src-var">$params&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'block_type'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'checkbox'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../AdvancedContent/acContentBlockBase.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$content_obj</span><span class="src-sym">,&nbsp;</span><span class="src-var">$params</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodSetProperty">SetProperty</a><span class="src-sym">(</span><span class="src-str">'default'</span><span class="src-sym">,</span><a href="http://www.php.net/intval">intval</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'default'</span><span class="src-sym">)))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../AdvancedContent/acBlockType_checkbox.html#methodGetInput">GetInput</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-str">'&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&quot;&nbsp;value=&quot;0&quot;&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;id=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&quot;&nbsp;class=&quot;pagecheckbox&quot;'</span>.&nbsp;<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'style'</span><span class="src-sym">)&nbsp;</span>!=&nbsp;<span class="src-str">''</span>?<span class="src-str">'&nbsp;style=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'style'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&nbsp;&quot;'</span>:<span class="src-str">''</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'&nbsp;type=&quot;checkbox&quot;&nbsp;value=&quot;1&quot;&nbsp;name=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&quot;'</span>.&nbsp;<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetContent">GetContent</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>==&nbsp;<span class="src-num">1&nbsp;</span>?&nbsp;<span class="src-str">'&nbsp;checked=&quot;checked&quot;'</span>:<span class="src-str">''</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&nbsp;/&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 09 Oct 2012 16:57:02 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>

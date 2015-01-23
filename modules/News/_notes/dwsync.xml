@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="News.module.php" server="w4.texus.lt" local="130664834482806571" remote="130664713800000000" Dst="1" />
+<file name="action.addarticle.php" server="w4.texus.lt" local="130664834483096492" remote="130664713800000000" Dst="1" />
+<file name="action.addcategory.php" server="w4.texus.lt" local="130664834483096492" remote="130664713800000000" Dst="1" />
+<file name="action.admin_addfielddef.php" server="w4.texus.lt" local="130664834483716623" remote="130664713800000000" Dst="1" />
+<file name="action.admin_deletefielddef.php" server="w4.texus.lt" local="130664834483716623" remote="130664713800000000" Dst="1" />
+<file name="action.admin_editfielddef.php" server="w4.texus.lt" local="130664834483746519" remote="130664713800000000" Dst="1" />
+<file name="action.admin_movefielddef.php" server="w4.texus.lt" local="130664834484416541" remote="130664713800000000" Dst="1" />
+<file name="action.browsecat.php" server="w4.texus.lt" local="130664834484416541" remote="130664713800000000" Dst="1" />
+<file name="action.approvearticle.php" server="w4.texus.lt" local="130664834484446544" remote="130664713800000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834485116709" remote="130664713800000000" Dst="1" />
+<file name="action.defaulturl.php" server="w4.texus.lt" local="130664834485116709" remote="130664713800000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834485146731" remote="130664713800000000" Dst="1" />
+<file name="action.deletearticle.php" server="w4.texus.lt" local="130664834485826624" remote="130664713800000000" Dst="1" />
+<file name="action.deletecategory.php" server="w4.texus.lt" local="130664834485856627" remote="130664713800000000" Dst="1" />
+<file name="action.deletetemplate.php" server="w4.texus.lt" local="130664834486336658" remote="130664713800000000" Dst="1" />
+<file name="action.detail.php" server="w4.texus.lt" local="130664834486866804" remote="130664713800000000" Dst="1" />
+<file name="action.editcategory.php" server="w4.texus.lt" local="130664834486946815" remote="130664713800000000" Dst="1" />
+<file name="action.editarticle.php" server="w4.texus.lt" local="130664834486976696" remote="130664713800000000" Dst="1" />
+<file name="action.edittemplate.php" server="w4.texus.lt" local="130664834487576724" remote="130664713800000000" Dst="1" />
+<file name="action.fesubmit.php" server="w4.texus.lt" local="130664834487666846" remote="130664713800000000" Dst="1" />
+<file name="action.makedefaulttemplate.php" server="w4.texus.lt" local="130664834487666846" remote="130664713800000000" Dst="1" />
+<file name="action.setdefaulttemplate.php" server="w4.texus.lt" local="130664834488236764" remote="130664713800000000" Dst="1" />
+<file name="action.updatedetailtemplate.php" server="w4.texus.lt" local="130664834488386804" remote="130664713800000000" Dst="1" />
+<file name="action.updateoptions.php" server="w4.texus.lt" local="130664834488386804" remote="130664713800000000" Dst="1" />
+<file name="action.updatesummarytemplate.php" server="w4.texus.lt" local="130664834488946806" remote="130664713800000000" Dst="1" />
+<file name="changelog.inc" server="w4.texus.lt" local="130664834489096905" remote="130664713800000000" Dst="1" />
+<file name="contenttype.news.php" server="w4.texus.lt" local="130664834489096905" remote="130664713800000000" Dst="1" />
+<file name="function.admin_articlestab.php" server="w4.texus.lt" local="130664834489656854" remote="130664713800000000" Dst="1" />
+<file name="function.admin_categoriestab.php" server="w4.texus.lt" local="130664834489766854" remote="130664713800000000" Dst="1" />
+<file name="function.admin_customfieldstab.php" server="w4.texus.lt" local="130664834489766854" remote="130664713800000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834490396890" remote="130664713800000000" Dst="1" />
+<file name="function.admin_optionstab.php" server="w4.texus.lt" local="130664834490436974" remote="130664713800000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834513318199" remote="130664713800000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834513338371" remote="130664713800000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834513968236" remote="130664713800000000" Dst="1" />
+</dwsync>

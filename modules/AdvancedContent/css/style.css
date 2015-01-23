@@ -1,0 +1,88 @@
+a.ac_contract,
+a.ac_expand {
+	background-repeat: no-repeat !important;
+	text-indent:-900% !important;
+	overflow:hidden !important;
+	outline:none !important;
+	padding-left:1.8em !important;
+}
+
+.ac_no-overflow {
+	overflow:hidden
+}
+
+.ac_fieldset {
+	margin:5px 3% 15px 0;
+	position:relative;
+	padding-right: 30px;
+}
+
+#page_content fieldset.ac_no-border {
+	padding-top:1px;
+	padding-bottom:1px;
+	margin-left:1px;
+	border:none;
+}
+
+.sortable_handler:hover {
+	cursor : move;
+}
+
+.sortable_handler {
+	margin:0 5px 0 0;
+	vertical-align: text-top;
+}
+
+.sortable_wrapper input {
+	margin:0 5px 0 0;
+}
+
+.sortable {
+	line-height: 200%;
+	padding: 0 0 0 5px;
+}
+
+div.pageoverflow.ac_content_block {
+	width: 100%;
+	margin-top:0.5em;
+	margin-bottom:1em;
+}
+
+legend.ac_content_block,
+legend.ac_block_group {
+	padding-bottom: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+div#page_tabs div.ac_block_tabs {
+	background:transparent;
+	border:none;
+	cursor:auto;
+	float:none;
+	margin:0px;
+	padding:0px;
+}
+
+#ui-datepicker-div {
+	box-shadow:2px 2px 5px #666666;
+}
+
+div.ac_block_message,
+div.ac_block_errormessage {
+	position:relative!important;
+}
+
+div.ac_page_message,
+div.ac_page_errormessage {
+	position:fixed!important;
+	z-index:999;
+	top:0;
+	margin:auto;
+}
+
+#page_content div.ac_block_tabs ul {
+	margin:0;
+	padding:0;
+}

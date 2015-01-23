@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="class.CGImageBase.php" server="w4.texus.lt" local="130664833816778321" remote="130664712600000000" Dst="1" />
+<file name="class.CGImageFilterBase.php" server="w4.texus.lt" local="130664833816918319" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Blur_Filter.php" server="w4.texus.lt" local="130664833817498356" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Brightness_Filter.php" server="w4.texus.lt" local="130664833818088391" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Colorize_Filter.php" server="w4.texus.lt" local="130664833818148393" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Contrast_Filter.php" server="w4.texus.lt" local="130664833818688419" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Crop_Filter.php" server="w4.texus.lt" local="130664833819218453" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Croptofit_Filter.php" server="w4.texus.lt" local="130664833819298460" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Edgedetect_Filter.php" server="w4.texus.lt" local="130664833819818491" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Emboss_Filter.php" server="w4.texus.lt" local="130664833820358513" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Flip_Filter.php" server="w4.texus.lt" local="130664833820428532" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Grayscale_Filter.php" server="w4.texus.lt" local="130664833820878559" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Meanremoval_Filter.php" server="w4.texus.lt" local="130664833821448579" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Negate_Filter.php" server="w4.texus.lt" local="130664833821488594" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Pixelate_Filter.php" server="w4.texus.lt" local="130664833821988611" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Reflect_Filter.php" server="w4.texus.lt" local="130664833822568643" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Resize_Filter.php" server="w4.texus.lt" local="130664833822698653" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Resizetofit_Filter.php" server="w4.texus.lt" local="130664833822698653" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Rotate_Filter.php" server="w4.texus.lt" local="130664833823268737" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Roundedcorners_Filter.php" server="w4.texus.lt" local="130664833823388691" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Selectiveblur_Filter.php" server="w4.texus.lt" local="130664833823388691" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Smooth_Filter.php" server="w4.texus.lt" local="130664833824058728" remote="130664712600000000" Dst="1" />
+<file name="class.CGImage_Watermark_Filter.php" server="w4.texus.lt" local="130664833824058728" remote="130664712600000000" Dst="1" />
+<file name="class.CGSmartImage_ClearCacheTask.php" server="w4.texus.lt" local="130664833824088785" remote="130664712600000000" Dst="1" />
+<file name="class.cgsi_DeviceAtlasPersonal_client.php" server="w4.texus.lt" local="130664833824658805" remote="130664712600000000" Dst="1" />
+<file name="class.cgsi_devicecapabilities_client.php" server="w4.texus.lt" local="130664833824768770" remote="130664712600000000" Dst="1" />
+<file name="class.cgsi_utils.php" server="w4.texus.lt" local="130664833824798769" remote="130664712600000000" Dst="1" />
+<file name="colors.dat" server="w4.texus.lt" local="130664833825398807" remote="130664712600000000" Dst="1" />
+<file name="imageSmoothArc_optimized.php" server="w4.texus.lt" local="130664833825468811" remote="130664712600000000" Dst="1" />
+</dwsync>

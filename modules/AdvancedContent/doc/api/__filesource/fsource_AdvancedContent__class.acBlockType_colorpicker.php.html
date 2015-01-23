@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for class.acBlockType_colorpicker.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file class.acBlockType_colorpicker.php</h1>
+<p>Documentation is available at <a href="../AdvancedContent/_class.acBlockType_colorpicker.php.html">class.acBlockType_colorpicker.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-key">class&nbsp;</span><a href="../AdvancedContent/acBlockType_colorpicker.html">acBlockType_colorpicker</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../AdvancedContent/acContentBlockBase.html">acContentBlockBase</a></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../AdvancedContent/acBlockType_colorpicker.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">&amp;</span><span class="src-var">$content_obj</span><span class="src-sym">,&nbsp;</span><span class="src-var">$params&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$params</span><span class="src-sym">[</span><span class="src-str">'block_type'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'colorpicker'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../AdvancedContent/acContentBlockBase.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$content_obj</span><span class="src-sym">,&nbsp;</span><span class="src-var">$params</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../AdvancedContent/acBlockType_colorpicker.html#methodGetInput">GetInput</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-str">'#&nbsp;&lt;input&nbsp;id=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&quot;&nbsp;type=&quot;text&quot;'</span>.&nbsp;<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'style'</span><span class="src-sym">)&nbsp;</span>!=&nbsp;<span class="src-str">''</span>?<span class="src-str">'style=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'style'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&nbsp;&quot;'&nbsp;</span>:&nbsp;<span class="src-str">''</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&nbsp;maxlength=&quot;6&quot;&nbsp;size=&quot;7&quot;&nbsp;name=&quot;'</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetProperty">GetProperty</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)&nbsp;</span>.<span class="src-str">'&quot;&nbsp;value=&quot;'</span>.&nbsp;<a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../AdvancedContent/acContentBlockBase.html#methodGetContent">GetContent</a><span class="src-sym">(</span><span class="src-sym">))&nbsp;</span>.<span class="src-str">'&quot;&nbsp;/&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../AdvancedContent/acBlockType_colorpicker.html#methodGetHeaderHTML">GetHeaderHTML</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">_header_html_called</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-var">_header_html_called&nbsp;</span>=&nbsp;<span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$config&nbsp;</span>=&nbsp;<span class="src-id">cmsms</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id">GetConfig</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$ret&nbsp;</span>=&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-str">&lt;link&nbsp;rel=stylesheet&nbsp;href=&quot;'</span>.<span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'root_url'</span><span class="src-sym">]</span>.<span class="src-str">'/modules/AdvancedContent/css/jpicker.css&quot;&nbsp;type=&quot;text/css&quot;&nbsp;/&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-str">&lt;script&nbsp;language=&quot;javascript&quot;&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;'</span>.<span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'root_url'</span><span class="src-sym">]</span>.<span class="src-str">'/modules/AdvancedContent/js/jquery.jpicker.min.js&quot;&nbsp;defer=&quot;true&quot;&gt;&lt;/script&gt;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-str">&lt;script&nbsp;language=&quot;javascript&quot;&nbsp;type=&quot;text/javascript&quot;&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-str">/*&nbsp;&lt;![CDATA[&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-str">ac_onload.push(function(){</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;(function($){</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.fn.jPicker.defaults.images.clientPath=&quot;'</span>.<span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'root_url'</span><span class="src-sym">]</span>.<span class="src-str">'/modules/AdvancedContent/images/jpicker/&quot;;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-id">acContentBlockManager</span><span class="src-sym">::</span><span class="src-id">GetBlocksByType</span><span class="src-sym">(</span><span class="src-str">'colorpicker'</span><span class="src-sym">)&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$block_id</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$ret&nbsp;</span>.=&nbsp;<span class="src-str">'$(&quot;#'</span>.&nbsp;<span class="src-var">$block_id&nbsp;</span>.<span class="src-str">'&quot;).jPicker();'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$ret&nbsp;</span>.&nbsp;<span class="src-str">'</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;})(jQuery);</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-str">});</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-str">/*&nbsp;]]&gt;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-str">&lt;/script&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 09 Oct 2012 16:57:03 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>

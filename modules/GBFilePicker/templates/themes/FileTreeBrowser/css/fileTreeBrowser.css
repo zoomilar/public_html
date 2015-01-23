@@ -1,0 +1,152 @@
+.gbfp_dialog_content button.wait { background-image: url(../img/spinner.gif); background-position: left center; background-repeat: no-repeat; }
+
+
+
+/* jQuery Layout */
+
+.gbfp_dialog_content .ui-layout-container {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	overflow:hidden;
+}
+
+.gbfp_dialog_content .pane-header ,
+.gbfp_dialog_content .ui-layout-content {
+	padding:	 5px 10px;
+}
+.gbfp_dialog_content .pane-header {
+}
+.gbfp_dialog_content .ui-layout-content {
+	border: 0; /* nullify ui-widget-content border - 'pane' already has this */
+	overflow: auto;
+}
+.gbfp_dialog_content .ui-layout-resizer-east {
+	/* NOTE: SOMETHING in the theme CSS is setting opacity here */
+	opacity:	.5;
+	filter: alpha(opacity=1);
+	background-color:#EEE;
+}
+.gbfp_dialog_content .ui-layout-resizer-dragging ,
+.gbfp_dialog_content .ui-layout-resizer-sliding ,
+.gbfp_dialog_content .ui-layout-resizer:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.gbfp_dialog_content .ui-layout-toggler {
+	background-color:#CCC;
+}
+
+.gbfp_dialog_content .ui-layout-toggler:hover {
+	background-color:#AAA;
+}
+
+
+
+/* jQuery FileTree */
+
+/* Core Styles */
+.gbfp_dialog_content UL.jqueryFileTree * {
+	outline:none;
+}
+
+.gbfp_dialog_content UL.jqueryFileTree {
+	line-height: 160%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.gbfp_dialog_content UL.jqueryFileTree LI {
+	list-style: none;
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0px;
+	white-space: nowrap;
+}
+
+.gbfp_dialog_content UL.jqueryFileTree A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 0px 2px;
+	
+	white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    -webkit-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+}
+
+.gbfp_dialog_content UL.jqueryFileTree A.ui-selected,
+.gbfp_dialog_content UL.jqueryFileTree A:hover {
+	background-color: #BDF;
+}
+
+.gbfp_dialog_content .jqueryFileTree LI.directory { background: url(../img/directory.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.expanded { background: url(../img/folder_open.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.file { background: url(../img/file.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.wait { background: url(../img/spinner.gif) left top no-repeat; }
+
+/* File Extensions*/
+.gbfp_dialog_content .jqueryFileTree LI.ext_3gp { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_afp { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_afpa { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_asp { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_aspx { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_avi { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_bat { background: url(../img/application.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_bmp { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_c { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_cfm { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_cgi { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_com { background: url(../img/application.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_cpp { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_css { background: url(../img/css.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_doc { background: url(../img/doc.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_exe { background: url(../img/application.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_gif { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_fla { background: url(../img/flash.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_h { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_htm { background: url(../img/html.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_html { background: url(../img/html.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_jar { background: url(../img/java.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_jpg { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_jpeg { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_js { background: url(../img/script.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_lasso { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_log { background: url(../img/txt.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_m4p { background: url(../img/music.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_mov { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_mp3 { background: url(../img/music.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_mp4 { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_mpg { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_mpeg { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_ogg { background: url(../img/music.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_pcx { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_pdf { background: url(../img/pdf.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_php { background: url(../img/php.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_png { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_ppt { background: url(../img/ppt.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_psd { background: url(../img/psd.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_pl { background: url(../img/script.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_py { background: url(../img/script.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_rb { background: url(../img/ruby.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_rbx { background: url(../img/ruby.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_rhtml { background: url(../img/ruby.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_rpm { background: url(../img/linux.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_ruby { background: url(../img/ruby.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_sql { background: url(../img/db.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_swf { background: url(../img/flash.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_tif { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_tiff { background: url(../img/picture.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_txt { background: url(../img/txt.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_vb { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_wav { background: url(../img/music.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_wmv { background: url(../img/film.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_xls { background: url(../img/xls.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_xml { background: url(../img/code.png) left top no-repeat; }
+.gbfp_dialog_content .jqueryFileTree LI.ext_zip { background: url(../img/zip.png) left top no-repeat; }

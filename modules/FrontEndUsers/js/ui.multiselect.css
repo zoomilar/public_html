@@ -1,0 +1,51 @@
+
+	.superselect select {
+		width: 306px;
+		height: 200px;
+		border: 1px #cccccc solid;
+	}
+	
+
+.ui-multiselect {font-size: 0.8em;}
+.ui-multiselect ul { width: 200px; }
+.ui-multiselect li { margin: 0; padding: 0; cursor: default; line-height: 20px; height: 20px; font-size: 11px; list-style: none; }
+.ui-multiselect li a { color: #999; text-decoration: none; padding: 0; display: block; float: left; cursor: pointer;}
+.ui-multiselect li .ui-draggable-dragging { padding-left: 10px; }
+
+.ui-multiselect div.selected { position: relative; padding: 0; margin: 0;border: 1px #e3e3e3 solid; border-right: 0; float:left; background: #fcfcfc url('../images/input.gif') repeat-x left top;}
+.ui-multiselect ul.selected { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fcfcfc; margin: 0 !important; list-style: none; border: 0; position: relative; width: 100%; }
+.ui-multiselect ul.selected li {padding-left: 7px;  }
+
+.ui-multiselect div.available { position: relative; padding: 0; margin: 0; border: 0; float:left; border: 1px #e3e3e3 solid; background: #fcfcfc url('../images/input.gif') repeat-x left top;}
+.ui-multiselect ul.available { position: relative; padding: 0; overflow: auto; overflow-x: hidden; background: #fcfcfc; margin: 0 !important; list-style: none; border: 0; width: 100%; }
+.ui-multiselect ul.available li { padding-left: 20px; }
+ 
+.ui-multiselect .ui-state-default { border: none; margin-bottom: 1px; position: relative; padding-left: 20px;}
+.ui-multiselect .ui-state-hover { border: none; }
+.ui-multiselect .ui-widget-header {border: none; font-size: 11px; margin-bottom: 1px;}
+ 
+.ui-multiselect .add-all { float: left; padding: 7px;}
+.ui-multiselect .remove-all { float: left; padding: 7px;}
+.ui-multiselect .search { float: right; padding: 4px;}
+.ui-multiselect .count { float: right; padding: 7px;}
+
+.ui-multiselect li span .ui-icon-arrowthick-2-n-s { position: absolute; left: 2px; }
+.ui-multiselect ul.selected li a.action { position: absolute; right: 2px; top: 2px; }
+.ui-multiselect ul.available li a.action { position: absolute; left: 2px; top: 2px; }
+ 
+.ui-multiselect input.search { height: 14px; padding: 1px; opacity: 0.7; margin: 4px; width: 70px; }
+
+
+.ui-state-default, .ui-widget-content .ui-state-default {background-color: #f4f4f4; border: 1px #f3f3f3 solid}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {background-color: #e6e6e6;  border: 1px #f3f3f3 solid}
+
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ui-widget input { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ui-widget-content a { color: #222222; }
+
+.ui-icon {display: block; height: 17px; width: 15px;}
+.ui-icon-plus {background: url('../images/plus.gif') no-repeat center center !important}
+.ui-icon-minus {background: url('../images/minus.gif') no-repeat center center !important}
+
+
+.ui-helper-hidden-accessible { position: absolute; left: -99999999px; }

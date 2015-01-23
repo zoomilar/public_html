@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Titulinis.module.php" server="w4.texus.lt" local="130664835097201637" remote="130664715000000000" Dst="1" />
+<file name="action.changestate.php" server="w4.texus.lt" local="130664835097211635" remote="130664715000000000" Dst="1" />
+<file name="action.addprop.php" server="w4.texus.lt" local="130664835097231645" remote="130664715000000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664835097811751" remote="130664715000000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664835097861769" remote="130664715000000000" Dst="1" />
+<file name="action.deleteprop.php" server="w4.texus.lt" local="130664835097861769" remote="130664715000000000" Dst="1" />
+<file name="action.kiek.php" server="w4.texus.lt" local="130664835098451785" remote="130664715000000000" Dst="1" />
+<file name="action.editprop.php" server="w4.texus.lt" local="130664835098481778" remote="130664715000000000" Dst="1" />
+<file name="action.reorderprop.php" server="w4.texus.lt" local="130664835098911746" remote="130664715000000000" Dst="1" />
+<file name="dom.php" server="w4.texus.lt" local="130664835099481888" remote="130664715000000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664835102921965" remote="130664715000000000" Dst="1" />
+<file name="laukeliai.php" server="w4.texus.lt" local="130664835104812073" remote="130664715000000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664835105312104" remote="130664715000000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664835105392111" remote="130664715000000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664835105952138" remote="130664715000000000" Dst="1" />
+<file name="moduleinterface.php" server="w4.texus.lt" local="130664835106522173" remote="130664715000000000" Dst="1" />
+<file name="scripts.js" server="w4.texus.lt" local="130664835106662195" remote="130664715000000000" Dst="1" />
+<file name="upd-stat.php" server="w4.texus.lt" local="130664835109122319" remote="130664715000000000" Dst="1" />
+</dwsync>

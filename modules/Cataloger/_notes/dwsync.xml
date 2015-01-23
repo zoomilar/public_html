@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Cataloger.Image.php" server="w4.texus.lt" local="130664833865831130" remote="130664712600000000" Dst="1" />
+<file name="Cataloger.module.php" server="w4.texus.lt" local="130664833866481162" remote="130664712600000000" Dst="1" />
+<file name="action.adminattrs.php" server="w4.texus.lt" local="130664833866481162" remote="130664712600000000" Dst="1" />
+<file name="action.adminprefs.php" server="w4.texus.lt" local="130664833866511165" remote="130664712600000000" Dst="1" />
+<file name="action.all.php" server="w4.texus.lt" local="130664833867081293" remote="130664712600000000" Dst="1" />
+<file name="action.compare.php" server="w4.texus.lt" local="130664833867201198" remote="130664712600000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664833867201198" remote="130664712600000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664833867821241" remote="130664712600000000" Dst="1" />
+<file name="action.defaultcategory.php" server="w4.texus.lt" local="130664833868321360" remote="130664712600000000" Dst="1" />
+<file name="action.defaultprintable.php" server="w4.texus.lt" local="130664833868321360" remote="130664712600000000" Dst="1" />
+<file name="action.deletetempl.php" server="w4.texus.lt" local="130664833868941300" remote="130664712600000000" Dst="1" />
+<file name="action.edittempl.php" server="w4.texus.lt" local="130664833868991299" remote="130664712600000000" Dst="1" />
+<file name="action.globalops.php" server="w4.texus.lt" local="130664833868991299" remote="130664712600000000" Dst="1" />
+<file name="action.globalsubmit.php" server="w4.texus.lt" local="130664833869601344" remote="130664712600000000" Dst="1" />
+<file name="action.random.php" server="w4.texus.lt" local="130664833869661414" remote="130664712600000000" Dst="1" />
+<file name="action.recent.php" server="w4.texus.lt" local="130664833870131363" remote="130664712600000000" Dst="1" />
+<file name="action.reimport.php" server="w4.texus.lt" local="130664833870691518" remote="130664712600000000" Dst="1" />
+<file name="action.submitattrs.php" server="w4.texus.lt" local="130664833871291433" remote="130664712600000000" Dst="1" />
+<file name="action.submitprefs.php" server="w4.texus.lt" local="130664833871351435" remote="130664712600000000" Dst="1" />
+<file name="action.variable.php" server="w4.texus.lt" local="130664833871831465" remote="130664712600000000" Dst="1" />
+<file name="contenttype.catalogcategory.php" server="w4.texus.lt" local="130664833872481526" remote="130664712600000000" Dst="1" />
+<file name="contenttype.catalogitem.php" server="w4.texus.lt" local="130664833872481526" remote="130664712600000000" Dst="1" />
+<file name="contenttype.catalogprintable.php" server="w4.texus.lt" local="130664833872531622" remote="130664712600000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664833876391738" remote="130664712600000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664833883672145" remote="130664712600000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664833883672145" remote="130664712600000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664833883792153" remote="130664712600000000" Dst="1" />
+</dwsync>

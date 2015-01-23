@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="class.AdvancedContentModule.php" server="w4.texus.lt" local="130664833728573269" remote="130664712600000000" Dst="1" />
+<file name="class.Content2.php" server="w4.texus.lt" local="130664833729233299" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockTypePlaceholder.php" server="w4.texus.lt" local="130664833729863335" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_checkbox.php" server="w4.texus.lt" local="130664833729873333" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_colorpicker.php" server="w4.texus.lt" local="130664833730423367" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_date.php" server="w4.texus.lt" local="130664833730923407" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_dropdown.php" server="w4.texus.lt" local="130664833731123407" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_image.php" server="w4.texus.lt" local="130664833731653465" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_multi_input.php" server="w4.texus.lt" local="130664833732243471" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_select_multiple.php" server="w4.texus.lt" local="130664833732793623" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_slider.php" server="w4.texus.lt" local="130664833733353802" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_text.php" server="w4.texus.lt" local="130664833733913682" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_ui_slider.php" server="w4.texus.lt" local="130664833734473714" remote="130664712600000000" Dst="1" />
+<file name="class.acBlockType_module.php" server="w4.texus.lt" local="130664833735093748" remote="130664712600000000" Dst="1" />
+<file name="class.acContentBlockBase.php" server="w4.texus.lt" local="130664833735093748" remote="130664712600000000" Dst="1" />
+<file name="class.acContentBlockManager.php" server="w4.texus.lt" local="130664833735753684" remote="130664712600000000" Dst="1" />
+<file name="class.acTabManager.php" server="w4.texus.lt" local="130664833736353707" remote="130664712600000000" Dst="1" />
+<file name="class.ac_admin_ops.php" server="w4.texus.lt" local="130664833736433714" remote="130664712600000000" Dst="1" />
+<file name="class.ac_smarty_plugins.php" server="w4.texus.lt" local="130664833737023871" remote="130664712600000000" Dst="1" />
+<file name="class.ac_utils.php" server="w4.texus.lt" local="130664833737563786" remote="130664712600000000" Dst="1" />
+<file name="class.advanced_content.php" server="w4.texus.lt" local="130664833737693786" remote="130664712600000000" Dst="1" />
+</dwsync>

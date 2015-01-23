@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Gallery.module.php" server="w4.texus.lt" local="130664834187359528" remote="130664713200000000" Dst="1" />
+<file name="action.createthumbs.php" server="w4.texus.lt" local="130664834188009687" remote="130664713200000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834188509596" remote="130664713200000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834188509596" remote="130664713200000000" Dst="1" />
+<file name="action.deletetemplate.php" server="w4.texus.lt" local="130664834189009626" remote="130664713200000000" Dst="1" />
+<file name="action.do-upload.php" server="w4.texus.lt" local="130664834189519655" remote="130664713200000000" Dst="1" />
+<file name="action.do_addtemplate.php" server="w4.texus.lt" local="130664834189589664" remote="130664713200000000" Dst="1" />
+<file name="action.do_editgallery.php" server="w4.texus.lt" local="130664834190029806" remote="130664713200000000" Dst="1" />
+<file name="action.do_editimage.php" server="w4.texus.lt" local="130664834190249698" remote="130664713200000000" Dst="1" />
+<file name="action.do_editsingleimgtemplate.php" server="w4.texus.lt" local="130664834190249698" remote="130664713200000000" Dst="1" />
+<file name="action.do_edittemplate.php" server="w4.texus.lt" local="130664834190859734" remote="130664713200000000" Dst="1" />
+<file name="action.do_editthumb.php" server="w4.texus.lt" local="130664834190899749" remote="130664713200000000" Dst="1" />
+<file name="action.do_exporttemplate.php" server="w4.texus.lt" local="130664834190899749" remote="130664713200000000" Dst="1" />
+<file name="action.do_importtemplate.php" server="w4.texus.lt" local="130664834191589894" remote="130664713200000000" Dst="1" />
+<file name="action.do_rotateimage.php" server="w4.texus.lt" local="130664834191679899" remote="130664713200000000" Dst="1" />
+<file name="action.do_updateoptions.php" server="w4.texus.lt" local="130664834192159807" remote="130664713200000000" Dst="1" />
+<file name="action.editfielddef.php" server="w4.texus.lt" local="130664834192929851" remote="130664713200000000" Dst="1" />
+<file name="action.editimage.php" server="w4.texus.lt" local="130664834192959854" remote="130664713200000000" Dst="1" />
+<file name="action.editgallery.php" server="w4.texus.lt" local="130664834192979928" remote="130664713200000000" Dst="1" />
+<file name="action.edittemplate.php" server="w4.texus.lt" local="130664834193559887" remote="130664713200000000" Dst="1" />
+<file name="action.edittplabout.php" server="w4.texus.lt" local="130664834193670014" remote="130664713200000000" Dst="1" />
+<file name="action.gallerytree.php" server="w4.texus.lt" local="130664834193670014" remote="130664713200000000" Dst="1" />
+<file name="action.multiaction.php" server="w4.texus.lt" local="130664834194269949" remote="130664713200000000" Dst="1" />
+<file name="action.showlatest.php" server="w4.texus.lt" local="130664834194389932" remote="130664713200000000" Dst="1" />
+<file name="action.showlatestdir.php" server="w4.texus.lt" local="130664834194399940" remote="130664713200000000" Dst="1" />
+<file name="action.switchdefault.php" server="w4.texus.lt" local="130664834195079970" remote="130664713200000000" Dst="1" />
+<file name="action.switchdefaulttemplate.php" server="w4.texus.lt" local="130664834195089973" remote="130664713200000000" Dst="1" />
+<file name="action.showrandom.php" server="w4.texus.lt" local="130664834195120010" remote="130664713200000000" Dst="1" />
+<file name="changelog.inc" server="w4.texus.lt" local="130664834195770110" remote="130664713200000000" Dst="1" />
+<file name="function.admin_fielddefstab.php" server="w4.texus.lt" local="130664834195770110" remote="130664713200000000" Dst="1" />
+<file name="function.admin_galleriestab.php" server="w4.texus.lt" local="130664834195800103" remote="130664713200000000" Dst="1" />
+<file name="function.admin_optionstab.php" server="w4.texus.lt" local="130664834196370055" remote="130664713200000000" Dst="1" />
+<file name="function.admin_templatestab.php" server="w4.texus.lt" local="130664834196500055" remote="130664713200000000" Dst="1" />
+<file name="function.importtemplate.php" server="w4.texus.lt" local="130664834196500055" remote="130664713200000000" Dst="1" />
+<file name="function.thumbnail.php" server="w4.texus.lt" local="130664834197120089" remote="130664713200000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834201630349" remote="130664713200000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834217521376" remote="130664713200000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834218101291" remote="130664713200000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834218611422" remote="130664713200000000" Dst="1" />
+</dwsync>

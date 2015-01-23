@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AdvancedContent.module.php" server="w4.texus.lt" local="130664833658529313" remote="130664712000000000" Dst="1" />
+<file name="action.addMultiInput.php" server="w4.texus.lt" local="130664833658659353" remote="130664712000000000" Dst="1" />
+<file name="action.addMultiInputTpl.php" server="w4.texus.lt" local="130664833659099285" remote="130664712000000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664833659639316" remote="130664712000000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664833659729413" remote="130664712000000000" Dst="1" />
+<file name="action.deleteMultiInput.php" server="w4.texus.lt" local="130664833660129344" remote="130664712000000000" Dst="1" />
+<file name="action.deleteMultiInputTpl.php" server="w4.texus.lt" local="130664833660709372" remote="130664712000000000" Dst="1" />
+<file name="action.editMultiInputTpl.php" server="w4.texus.lt" local="130664833661319412" remote="130664712000000000" Dst="1" />
+<file name="action.editMultiInput.php" server="w4.texus.lt" local="130664833661379419" remote="130664712000000000" Dst="1" />
+<file name="action.savePrefs.php" server="w4.texus.lt" local="130664833662409473" remote="130664712000000000" Dst="1" />
+<file name="event.Core.ContentEditPost.php" server="w4.texus.lt" local="130664833690601294" remote="130664712600000000" Dst="1" />
+<file name="event.Core.ContentPostRender.php" server="w4.texus.lt" local="130664833690661095" remote="130664712600000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664833697791501" remote="130664712600000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664833737693786" remote="130664712600000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664833738394007" remote="130664712600000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664833738394007" remote="130664712600000000" Dst="1" />
+</dwsync>

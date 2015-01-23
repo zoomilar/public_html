@@ -1,0 +1,737 @@
+<div style="font-size:1.2em">
+	<br />
+	<p><strong style="color:red">WARNUNG! </strong><br />
+	Wenn Sie das Modul deinstallieren, ohne alle Seiten vom Typ 'Erweiterter Inhalt' wieder zur&uuml;ck auf den Standard-Inhaltstypen zu setzen, funktioniert Ihre CMSms Installation nicht mehr korrekt!<br />
+	Stellen Sie sicher, dass alle Seiten vom Typ 'Erweiterter Inhalt' vor der Deinstallation wieder auf den normalen Inhaltstypen ge&auml;ndert oder gel&ouml;scht werden!</p>
+	
+	<h3>Was macht dieses Modul?</h3>
+	
+	<p>Dieses Modul bietet einen weiteren Inhaltstypen "Erweiterter Inhalt".<br />
+	Mit diesem Inhaltstypen kann die Administration beim Bearbeiten von Seiten flexibel gestaltet werden, indem man im Seiten-Template den einzelnen Inhaltsbl&ouml;cken weitere Parameter hinzuf&uuml;gt.<br />
+	Inhaltsbl&ouml;cke k&ouml;nnen in Form verschiedener Input-Felder wie Dropdowns, Mehrfachauswahlfelder oder Checkboxen dargestellt werden.<br />
+	Die Input-Felder k&ouml;nnen weiterhin in eigenen Tabs angezeigt oder in Gruppen zusammengefasst werden.<br />
+	Au&szlig;erdem hat man die M&ouml;glichkeit, Seiten oder einzelne Bl&ouml;cke nur f&uuml;r bestimmte Gruppen des FrontEndUsers Moduls freizugeben.<br />
+	Weiterhin k&ouml;nnen Seiten ein Start- und ein Enddatum erhalten, womit Seiten automatisch aktiv/inaktiv werden.<br />
+	Die erweiterten Einstellungen k&ouml;nnen von &uuml;bergeordneten Seiten &uuml;bernommen werden.</p>
+	<p>Die Parameter k&ouml;nnen au&szlig;erdem mit Hilfe von einfachem Smarty-Syntax dynamische Werte enthalten.<br />
+	D.h. man kann z.B. das Ergebnis eines benutzerdefinierten Tags, eines Plugins, eines Moduls oder einfach nur eines Globalen Inhaltsblockes als Wert f&uuml;r einen Parameter einsetzen lassen.</p>
+	
+	<h3>Wie wird es verwendet?</h3>
+	
+	<p>Nach der Installation wird der Administration ein weiterer Men&uuml;punkt "Erweiterungen-&gt;Erweiterter Inhalt" hinzugef&uuml;gt.<br />
+	Hier k&ouml;nnen verschiedene Einstellungen vorgenommen werden.<br />
+	Beim Bearbeiten von Seiten steht nun ein weiterer Inhaltstyp "Erweiterter Inhalt" zur Auswahl, der die Funktionen des Moduls bereitstellt.</p>
+	
+	<p><em><strong>Hinweis:</strong><br />
+	In manchen F&auml;llen empfielt es sich, anstelle des normalen {content} Tags den {AdvancedContent} Tag zu benutzen. (Gro&szlig;- und Kleinschreibung beachten)<br />
+	Die Fehlermeldung "Parameter [X] is not known by Module [Modulname]" kann damit z.B. umgangen werden.<br /><br />
+	Wenn die Startseite vom Typ Erweiterter Inhalt ist und der Inhaltstyp wird wieder auf den standard Inhaltstypen ge&auml;ndert, muss die Startseite erneut als solche gesetzt werden.<br /><br />
+	Wenn die Parameterwerte mit Hilfe von Smarty verarbeitet werden sollen, bedenken Sie, dass bestimmte Daten im Backend nicht bzw. nicht immer verf&uuml;gbar sind.<br />
+	Dies betrifft z.B. {$content_id}, {$page_alias} oder {title} etc., da diese Daten noch nicht existieren, wenn die Seite gerade erst erstellt wird.<br />
+	Manche Daten sind dar&uuml;ber hinaus nur dann verf&uuml;gbar, wenn die Seite explizit im Frontend gerendert wird.<br />
+	Es empfiehlt sich in solchen F&auml;llen ein extra Plugin oder UDT zu erstellen, in dem man entscheiden kann was passieren soll, wenn derartige Daten nicht existieren.<br /><br />
+	Wenn die SVN Version verwendet wird, die Datei /modules/AdvancedContent/lang/ext/de_DE.php l&ouml;schen.
+	</em></p>
+	
+	<h3>Benutzerdefinierte Block-Typen</h3>
+	<p>Eigene Block-Typen k&ouml;nnen mit ein wenig Programmierkenntnissen mit Hilfe des Verzeichnisses /module_custom/AdvancedContent/lib/ im Stammverzeichnis selbst erstellt werden.<br />
+	Falls nicht vorhanden, muss diese Verzeichnisstruktur selbst erstellt werden. Dabei muss auf Gro&szlig;- und Kleinschreibung geachtet werden. <br />
+	In diesem Verzeichnis legt man eine php-Datei nach folgendem Schema an: class.acBlockType_[name des blocktyps].php<br />
+	Der name des Blocktyps muss kleingeschrieben werden.<br />
+	In dieser Datei definiert man eine Klasse, die genauso hei&szlig;t wie der Teil des Dateinamens zwischen 'class.' und '.php'.<br />
+	Diese Klasse muss von der Basisklasse 'acContentBlockBase' abgeleitet werden. <br />
+	Im Konstruktor der Klasse muss als erstes der Konstruktor der Basisklasse aufgerufen werden.<br />
+	Bsp.:<br />
+	Dateiname: class.acBlockType_foo.php<br />
+	Inhalt:</p>
+<pre><code>class acBlockType_foo extends acContentBlockBase
+{
+	function __construct($params = array())
+	{
+		parent::__construct($params);
+		
+		# eigene Eigenschaften f&uuml;r diesen Blocktypen aus den Parametern auslesen
+		$this->SetProperty('bar', isset($params['bar']) ? $params['bar'] : '');
+	}
+	
+	public function GetInput()
+	{
+		# eigenes Inputfeld f&uuml;r diesen Blocktypen definieren
+		return 'Here should be a very special foo input.';
+	}
+}
+</code>
+</pre>
+<p><a href="../modules/AdvancedContent/doc/api/index.html" target="_blank">F&uuml;r weitere Informationen &uuml;ber verf&uuml;gbare Methoden eines Blocktyps lesen Sie hier die generierte API Dokumentation.</a><br />
+F&uuml;r detailiertere Beispiele, wie Block-Typen aufgebaut sein k&ouml;nnen, kann man auch einfach einen Blick in die Dateien im Verzeichnis /modules/AdvancedContent/lib/ werfen.</p>
+	
+	<h3>Welche Parameter sind verf&uuml;gbar?</h3>
+	
+	<p>Mit Hilfe folgender Parameter beim Erstellen von Inhaltsbl&ouml;cken im Seiten-Template k&ouml;nnen diese Funktionen verwendet werden:</p>
+	<p>(alle Parameter sind optional)</p>
+	
+	<p><strong>Standard Paramater:</strong></p>
+	
+	<p><em><a href="listtags.php?action=showpluginhelp&plugin=content&type=function">(siehe auch Tag-Hilfe des {content}-Tags)</a></em></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>block</tt> (string)
+			<ul>
+				<li>
+					Erm&ouml;glicht das Hinzuf&uuml;gen mehrerer Inhaltsbl&ouml;cke. Beim Bearbeiten einer Seite wird f&uuml;r jeden Block ein eigenes Input-Feld angezeigt.<br />
+					Bsp.: <code>{content block=&quot;Zweiter Inhaltsblock&quot;}</code><br />
+					<em><strong>Hinweis:</strong> Der Name des Inhaltsblocks darf nur Buchstaben, Zahlen und Unterstriche enthalten. (keine Leer- oder Sonderzeichen, Umlaute etc.). Anderenfalls wird der Blockname &auml;hnlich dem Seitenalias entprechend konvertiert.</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>wysiwyg</tt> (true/false)
+			<ul>
+				<li>Wenn dieser Wert auf false gesetzt wird, wird in der Administration beim Bearbeiten von Seiten kein WYSIWYG Editor f&uuml;r diesen Block verwendet.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>oneline</tt> (true/false)
+			<ul>
+				<li>Wenn dieser Wert auf false gesetzt wird, wird in der Administration beim Bearbeiten von Seiten nur ein einfaches einzeiliges Text-Input-Feld angezeigt.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>default</tt> (string)
+			<ul>
+				<li>Stabdardinhalt beim Erstellen neuer Seiten.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>label</tt> (string)
+			<ul>
+				<li>Die Eingabeaufforderung f&uuml;r den Inhaltsblock in der Administration beim Bearbeiten von Seiten. Wenn dieser Parameter fehlt, wird der unkonvertierte Wert des Parameters block verwendet.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>assign</tt> (string)
+			<ul>
+				<li>
+					Weist den Inhalt dieses Blocks auf der Internetseite einer Smarty Variablen zu.<br />
+					Bsp.: <code>{content assign="pagecontent"}<br />
+					{table_of_contents thepagecontent=&quot;$pagecontent&quot;}</code><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Erweiterte Parameter:</strong></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>block_type</tt> (text,checkbox,dropdown,select_multiple,date,multi_input,slider,colorpicker) 
+			<ul>
+				<li>Gibt an, in welcher Form der Inhaltsblock in der Administration beim Bearbeiten von Seiten angezeigt werden soll.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>page_tab</tt> (string)
+			<ul>
+				<li>
+					Mit diesem Parameter k&ouml;nnen Inhaltsbl&ouml;cke in der Administration beim Bearbeiten von Seiten in bestimmten Tabs angezeigt werden.<br />
+					M&ouml;gliche Werte sind z.B. &quot;main&quot; ( = Tab &quot;Hauptmen&uuml;&quot;), &quot;options&quot; ( = Tab &quot;Optionen&quot;), oder jeder andere beliebige Wert (erzeugt automatisch einen weiteren Tab).<br />
+					<em>Man kann somit z.B. eine Checkbox im Tab "Optionen" hinzuf&uuml;gen oder einen eigenen Tab erstellen.</em>.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>block_tab</tt> (string)
+			<ul>
+				<li>Mit diesem Parameter k&ouml;nnen die Inhaltsbl&ouml;cke nochmals in weitere "Untertabs" innerhalb der "Haupttabs" unterteilt werden.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>block_group</tt> (string)
+			<ul>
+				<li>
+					Mit diesem Parameter kann man mehrere Inhaltsbl&ouml;cke in einem Fieldset gruppieren.<br />
+					Die Gruppen k&ouml;nnen auch auf mehrere Tabs verteilt werden.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>active</tt> (true/false)
+			<ul>
+				<li>
+					Wenn dieser Wert auf false gesetzt wird, ist der Block deaktiviert.<br />
+					Deaktivierte Inhaltsbl&ouml;cke werden weder in der Administration beim Bearbeiten von Seiten, noch auf der Internetseite angezeigt.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>editor_groups</tt> (string)
+			<ul>
+				<li>
+					Dieser Parameter ist &auml;hnlich den "Zus&auml;tzlichen Bearbeitern" einer Seite. Er gilt allerdings nur f&uuml;r einzelne Inhaltsbl&ouml;cke.<br />
+					Mit diesem Parameter k&ouml;nnen Inhaltsbl&ouml;cke nur von bestimmten Benutzegruppen der Administration bearbeitet werden.<br />
+					(Name der Benutzergruppe eintragen; mehrere Gruppen mit Komma getrennt)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>editor_users</tt> (string)
+			<ul>
+				<li>
+					Dieser Parameter ist &auml;hnlich den "Zus&auml;tzlichen Bearbeitern" einer Seite. Er gilt allerdings nur f&uuml;r einzelne Inhaltsbl&ouml;cke.<br />
+					Mit diesem Parameter k&ouml;nnen Inhaltsbl&ouml;cke nur von bestimmten Benutzern der Administration bearbeitet werden.<br />
+					(Name des Benutzers eintragen; mehrere Benutzer mit Komma getrennt)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Hinweis:</strong> wenn die Parameter <tt>editor_users</tt> und <tt>editor_groups</tt> nicht verwendet werden, k&ouml;nnen die Bl&ouml;cke von jedem Benutzer bearbeitet werden.<br />
+		Die Werte haben keinen Einfluss, wenn der Benutzer der Gruppe "Admin" angeh&ouml;rt.<br />
+		Um einem Benutzer zu erlauben alle Inhaltsbl&ouml;cke unabh&auml;ngig von den beiden Parametern zu bearbeiten, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung "Manage all AdvancedContent Blocks" hat.</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>feu_access</tt>
+			<ul>
+				<li>
+					Dieser Parameter legt fest, welche Benutzergruppen des FrontEndUsers Moduls diesen Block auf der Internetseite sehen d&uuml;rfen.<br />
+					(ID der Benutzergruppe angeben; mehrere IDs mit Komma getrennt)<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>feu_action</tt> (true/false)
+			<ul>
+				<li>
+					Dieser Parameter gibt an, ob anstelle des Inhaltsblocks das Login-Formular des FrontEndUsers Moduls angezeigt werden soll, wenn dieser Block nur f&uuml;r bestimmte Benutzergruppen freigegeben und der Besucher nicht eingeloggt ist.<br />
+					<em><strong>Hinweis:</strong> Das Formular wird nur ein einziges Mal angezeigt.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>feu_hide</tt> (true/false)
+			<ul>
+				<li>
+					Dieser Parameter gibt an, ob ein &ouml;ffentlicher Block ausgeblendet werden soll, wenn der Besucher eingeloggt ist.<br />
+					Standard ist false.<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>allow_none</tt> (true/false)
+			<ul>
+				<li>Gibt an, ob der Block leer sein darf oder nicht.<br />
+				Wenn dieser Wert auf false gesetzt wird und der Inhalt des Blocks ist leer, wird der Wert des Parameters default verwendet.<br />
+				Wurde der Block mit dem Plugin {content_image} erstellt, fehlt die Option "Nichts" im Bild-Dropdown.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>smarty</tt> (backend/frontend/both)
+			<ul>
+				<li>
+					Schaltet die Verarbeitung der Parameterwerte mit Hilfe von Smarty ein/aus.<br />
+					
+					Wenn dieser Wert auf 'backend' gesetzt wird, wird jeder Parameter mit Hilfe der Smarty Template Engine nur beim Erstellen/Bearbeiten von Seiten im Backend verarbeitet.<br />
+					Wird dieser Wert auf 'frontend' gesetzt, wird jeder Parameter mit Hilfe der Smarty Template Engine nur im Frontend verarbeitet.<br />
+					Bei dem Wert 'both' oder 'true', gilt die Parameterverarbeitung sowohl für Frontend als auch Backend.<br />
+					<em><strong>Hinweis: </strong> Die Werte m&uuml;ssen als Smarty-Syntax gekennzeichnet werden. Hier k&ouml;nnen aber nicht Standard Smarty-Begrenzer ({...}) verwendet werden, da es zu Fehlern auf der Internetseite f&uuml;hrt.<br />
+					Daher werden stattdessen die Zeichen ::: als Begrenzer verwendet.<br /></em>
+					Bsp.: <code>{content block=&quot;Kategorien&quot; label=&quot;W&auml;hlen Sie eine Kategorie&quot; block_type=&quot;dropdown&quot; items=&quot;:::global_content name=&#039;categorylist&#039;:::&quot; smarty=&quot;true&quot;}</code>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>description</tt> (string) 
+			<ul>
+				<li>Eine detailiertere Beschreibung des Inhaltsblocks.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>collapse</tt> (true/false)
+			<ul>
+				<li>
+					Gibt an, ob ein Block in der Administration beim Bearbeiten von Seiten ein- (true) oder ausgeklappt (false) sein soll.<br />
+					<em><strong>Hinweis:</strong> ist immer false, wenn der Parameter no_collapse=true verwendet wird.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>no_collapse</tt> (true/false)
+			<ul>
+				<li>
+					Wenn dieser Wert auf true gesetzt ist, kann der Block nicht zusammengeklappt werden.<br />
+					<em><strong>Hinweis:</strong> wenn der Wert auf true gesetzt ist, ist der Parameter collapse automatisch immer false.</em><br />
+					<em>Bei Block-Gruppen wird immer nur der Wert des Parameters des jeweils ersten Blocks in dieser Gruppe berücksichtigt.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>required</tt> (true/false)
+			<ul>
+				<li>
+					Gibt an, ob ein Block ein Pflichtfeld ist (true) oder nicht (false).<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Zus&auml;tzliche Parameter f&uuml;r Text-Bl&ouml;cke:</strong></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>cols</tt> (int) 
+			<ul>
+				<li>
+					Die Breite (in Spalten) des Textfeldes. (funktioniert nur mit dem Parameter wwysiwyg=false)<br />
+					Standard ist 80.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>rows</tt> (int) 
+			<ul>
+				<li>
+					Due H&ouml;he (in Zeilen) des Textfeldes. (funktioniert nur mit dem Parameter wwysiwyg=false)<br />
+					Standard ist 15.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>auto_resize</tt> (true/false) 
+			<ul>
+				<li>
+					Auf false setzen, um die automatische H&ouml;henberechnng des Textfeldes zu deaktivieren, wenn die Anzahl der Zeilen erreicht wurde.<br />
+					Standard ist true.<br />
+					<em><strong>Hinweis:</strong> Die automatische  H&ouml;henberechnng funktioniert nur mit dem Parameter wwysiwyg=false</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Parameter f&uuml;r Checkboxen:</strong> keine weiteren Parameter.<br />
+	<em><strong>Hinweis:</strong> verwenden Sie den Parameter default=1 um eine Checkbox als Voreinstellung zu aktivieren</em>
+	</p>
+	
+	<p><strong>Parameter f&uuml;r Colorpicker:</strong> keine weiteren Parameter</p>
+	
+	<p><strong>Parameter f&uuml;r Slider:</strong> (<a href="http://blog.egorkhmelev.com/2009/11/jquery-slider-safari-style/" target="_blank">siehe auch Dokumentation des verwendeten jQuery Slider Plugins)</a></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>from</tt> (int) 
+			<ul>
+				<li>
+					Startwert
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>to</tt> (int) 
+			<ul>
+				<li>
+					Endwert
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>step</tt> (int) 
+			<ul>
+				<li>
+					Z&auml;hlschritte in denen die Werte ge&auml;ndert werden
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>round</tt> (int) 
+			<ul>
+				<li>
+					Stellen nach dem Komma
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>heterogeneity</tt> (string) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>dimension</tt> (string) 
+			<ul>
+				<li>
+					Einheit hinter den Werten.
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>limits</tt> (true/false) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>scale</tt> (string) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>skin</tt> (string) 
+			<ul>
+				<li>
+					Aussehen des sliders
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>calculate</tt> (string) 
+			<ul>
+				<li>
+					Eine Javascript-Funktion zur Berechnung der angezeigten Werte
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>onstatechange</tt> (string) 
+			<ul>
+				<li>
+					Eine Javascript-Funktion die ausgef&uuml;hrt werden soll, sobald der Wert ge&auml;ndert wird
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>callback</tt> (string) 
+			<ul>
+				<li>
+					Eine Javascript-Funktion die ausgef&uuml;hrt werden soll, nachdem der Wert ge&auml;ndert wurde
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Parameter f&uuml;r Dropdowns/Mehrfachauswahl:</strong></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>items</tt> (string)
+			<ul>
+				<li>Die Bezeichnung der einzelnen Eintr&auml;ge. (mit einem bestimmten Zeichen getrennt - Standard ist | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>values</tt> (string)
+			<ul>
+				<li>Die Werte der einzelnen Eintr&auml;ge. (mit einem bestimmten Zeichen getrennt - Standard ist | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Hinweis:</strong> wenn es weniger Werte als Bezeichnungen gibt, werden die restlichen Bezeichnungen als Werte verwendet (und umgekehrt).</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>default</tt> (string)
+			<ul>
+				<li>
+					Ausgew&auml;hlte Standardwerte (mit einem bestimmten Zeichen getrennt - Standard ist | (pipe))<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Hinweis:</strong> Verwenden Sie nur die <strong>Werte</strong> der Eintr&auml;ge als Standardwert, nicht die Bezeichnungen der Eintr&auml;ge.</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>delimiter</tt> (string)
+			<ul>
+				<li>Das Trennzeichen mit dem die Bezeichnungen, Werte und Standardwerte voneinander getrennt werden. (Standard ist | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<li><em>(optional)</em> <tt>size</tt> (integer)
+			<ul>
+				<li>Die H&ouml;he des Inputfeldes, wenn <code>block_type=&quot;select_multiple&quot;</code> verwendet wird.<em>(Standard ist die Anzahl der Eintr&auml;ge)</em></li>
+			</ul>
+			<br />
+		</li>
+		<li><em>(optional)</em> <tt>sortable</tt> (true/false) - nur bei select_multiple
+			<ul>
+				<li>
+					Wird dieser Wert auf true gesetzt, werden die Eintr&auml;ge nicht als Mehrfachauswahlfeld angezeigt, sondern als eine Liste mit Checkboxen, die neu sortiert werden kann.<br />Jede Zeile einth&auml;lt die Bezeichnung des Eintrags und eine Checkbox mit dem Wert des Eintrags.<br />
+					<em><strong>Hinweis:</strong> Es wird nur die Reihenfolge der <strong>ausgew&auml;hlten</strong> Eintr&auml;ge gespeichert. Ausgew&auml;hlte Eintr&auml;ge werden immer als erstes angezeigt.<br />
+					Nicht ausgew&auml;hlte Eintr&auml;ge stehen darunter in der Reihenfolge, wie sie im Template definiert wurden.</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Parameter f&uuml;r Datumsbl&ouml;cke:</strong></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>step_hours</tt> (int) 
+			<ul>
+				<li>
+					Z&auml;hlschritte der Stunden im Uhrzeit-Dropdown. (Standard ist 1)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>start_hour</tt> (int) 
+			<ul>
+				<li>
+					Beginn der Stunden im Uhrzeit-Dropdown. (Standard ist 0)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>end_hour</tt> (int) 
+			<ul>
+				<li>
+					Ende der Stunden im Uhrzeit-Dropdown. (Standard ist 12 oder 23 - abh&auml;ngig vom Parameter show24h)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>show24h</tt> (true/false) 
+			<ul>
+				<li>
+					Wenn dieser Wert auf false gesetzt wird, werden die Stunden in 12h Anzeige mit AM/PM angezeigt. (Standard is true)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>step_minutes</tt> (int) 
+			<ul>
+				<li>
+					Z&auml;hlschritte der Minuten im Uhrzeit-Dropdown. (Standard is 10)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>start_minute</tt> (int) 
+			<ul>
+				<li>
+					Beginn der Minuten im Uhrzeit-Dropdown. (Standard ist 0)
+				</li>
+			</ul>
+			<br />
+		</li>
+			<em>(optional)</em> <tt>end_minute</tt> (int) 
+			<ul>
+				<li>
+					Ende der Minuten im Uhrzeit-Dropdown. (Standard ist 59)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>show_clock</tt> (true/false) 
+			<ul>
+				<li>
+					Wenn dieser Wert auf false gesetzt ist, wird kein Uhrzeit-Dropdown angezeigt. (Standard ist true)<br />
+					<em><strong>Hinweis:</strong> Bei false wird als Uhrzeit 00:00 Uhr gespeichert</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>date_format</tt> (string) 
+			<ul>
+				<li>
+					Das strftime Datumsformat f&uuml;r die Anzeige auf der Internetseite.
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	
+	<p><strong>Parameter f&uuml;r &quot;multi_input&quot;:</strong></p>
+	
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>inputs</tt>
+			<ul>
+				<li>
+					Eine Liste von Input-IDs, die in den Moduleinstellungen erstellt wurden. (mehrere Werte mit Komma getrennt)<br />
+					Es k&ouml;nnen dieselben IDs mehrfach verwendet werden.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>value_delimiter</tt> (any string) 
+			<ul>
+				<li>
+					Ein Trennzeichen f&uuml;r die einzelnen Werte des jeweiligen MultiInputs.<br />
+					Standard ist &quot;&lt;!-- multi_input_value_dellimiter --&gt;&quot;
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>input_delimiter</tt> (any string) 
+			<ul>
+				<li>
+					Ein Trennzeichen f&uuml;r die einzelnen MultiInputs.<br />
+					Standard ist &quot;&lt;!-- multi_input_dellimiter --&gt;&quot;
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<p><strong>Was ist ein multi_input?</strong></p>
+			<p>Ein multi_input ist ein Block, der aus mehreren Inputfeldern bestehen kann.<br />
+			Diese k&ouml;nnen in den Moduleinstellungen festgelegt werden. Dabei gilt f&uuml;r jeden multi_input derselbe Syntax wie in einem Seitentemplate beim Erstellen eines Inhaltsblocks.<br />
+			MultiInputs k&ouml;nnen verwendet werden, um verschiedene Werte in einem einzigen Inhaltsblock zu speichern, wobei f&uuml;r jeden Wert unterschiedliche Inputfelder verwendet werden k&ouml;nnen.<br />
+			Diese Bl&ouml;cke kann man z.B. verwenden, um eine Liste mit Modulen und zugeh&ouml;rigen Parametern anzuzeigen.<br />
+			Beispiel eines MultiInputs im Seitentemplate:</p>
+			<pre>
+			<code>
+			{content block=&quot;module&quot; label=&quot;Seitenmodule&quot; block_type=&quot;multi_input&quot; inputs=&quot;module,module,module,module&quot;}
+			</code>
+			</pre>
+			<p>Beispiel f&uuml;r einen MultiInput der &uuml;ber die Moduleinstellung erstellt werden kann (Name=&quot;module&quot;):</p>
+			<pre>
+			<code>
+			{content block=&quot;module selection&quot; block_type=&quot;dropdown&quot; items=&quot;|News|Gallery|Menu&quot;}
+			{content block=&quot;module params&quot; block_type=&quot;text&quot; oneline=true}
+			</code>
+			</pre>
+			<p>Wie sieht das nun beim Bearbeiten einer Seite aus?</p>
+			<p>Es wird ein Fieldset mit der Legende &quot;Seitenmodule&quot; angezeigt. <br />
+			In diesem Fieldset wird der MultiInput &quot;module&quot; viermal angezeigt.<br />
+			D.h. es gibt vier Zeilen mit je zwei Inputfeldern. Ein Dropdown und ein einzeiliges Textinput.</p>
+			<p>Was wird gespeichert?</p>
+			<p>Das Modul speichert die Werte als einen einzelnen Inhaltsblock. Dabei werden die einzelnen Inputfelder mit dem input_delimiter voneinander getrennt und deren Wert mit dem input_value_delimiter.<br />
+			Nehmen wir mal an, es wurde das Newsmodul viermal ausgew&auml;hlt, jedoch mit unterschiedlichen Parametern wie z.B. category=&quot;1&quot;, category=&quot;2&quot;, category=&quot;3&quot;, category=&quot;4&quot;.<br />
+			In der Datenbank wird folgendes f&uuml;r diesen Block gespeichert:</p>
+			<pre>
+			<code>
+			News&lt;!-- multi_input_value_delimiter --&gt;category="1"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="2"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="3"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="4"
+			</code>
+			</pre>
+			<p>Im Seitentemplate kann man nun den Inhalt dieses Blocks anhand der Trennzeichen aufteilen und die ausgew&auml;hlten Module inkl. ihrer jeweiligen Parameter aufrufen.</p>
+			<p>Komplettes Beispiel:</p>
+			<pre>
+			<code>
+			{* Inhaltsblock erstellen und der Variable $modules zuweisen *}
+			{content block=&quot;meine_seitenmodule&quot; block_type=&quot;multi_input&quot; inputs=&quot;Module,Module,Module,Module&quot; assign=&quot;modules&quot;}
+			
+			{* Inhalt der Variable $modules in ein Array aufteilen und in der Variable $modules speichern; somit haben wir die MultiInputs *}
+			{assign var=modules value=&quot;&lt;!-- multi_input_delimiter --&gt;&quot;|explode:$modules}
+			
+			{* jeden MultiInput durchgehen *}
+			{foreach from=$modules item=&quot;module&quot;}
+				{if $module != ''}
+				
+					{* die Werte des MultiInputs in ein Array aufteilen; somit haben wir Modulname und Parameter *}
+					{assign var=module_items value=&quot;&lt;!-- multi_input_value_delimiter --&gt;&quot;|explode:$module}
+					
+					{if $module_items[0] != &#039;&#039;}
+					
+						{* Modul aufrufen *}
+						{if isset($module_items[1])}
+							{eval var=$smarty.ldelim|cat:'cms_module module="'|cat:$module_items[0]|cat:'" '|cat:$module_items[1]|cat:$smarty.rdelim}
+						{else}
+							{eval var=$smarty.ldelim|cat:'cms_module module="'|cat:$module_items[0]|cat:'"'|cat:$smarty.rdelim}
+						{/if}
+						
+					{/if}
+					
+				{/if}
+			
+			{/foreach}
+			</code>
+			</pre>
+		</li>
+	</ul>
+	
+	<h3>Support</h3>
+	<p>Dieses Modul bietet keine kommerzielle Unterst&uuml;tzung. Es gibt jedoch einige M&ouml;glichkeiten, Hilfe zu finden:</p>
+	<ul>
+		<li>Die Hompage des Projektes ist <a href="http://dev.cmsmadesimple.org/projects/content2/">http://dev.cmsmadesimple.org/projects/content2/</a></li>
+		<li>Weitere Diskussionen gibt es au&szlig;erdem in den CMS Made Simple Foren:<br />
+		<a href="http://forum.cmsmadesimple.de">http://forum.cmsmadesimple.de</a><br />
+		<a href="http://forum.cmsmadesimple.org">http://forum.cmsmadesimple.org</a></li>
+	</ul>
+	<br />
+	<p>Bitte melden Sie Fehler oder Verbesserungsvorschl&auml;ge auf der Projekt-Homepage.</p>
+	<h3>Copyright und Lizenz</h3>
+	<p>Copyright &copy; 2010-2012, Georg Busch (NaN) <a href="mailto:georg.busch@gmx.net">&lt;georg.busch@gmx.net&gt;</a>. Alle Rechte vorbehalten.</p>
+	<p>Dieses Modul wurde unter der <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a> ver&ouml;ffentlicht. Sie m&uuml;ssen dieser Lizenz zustimmen, bevor Sie das Modul verwenden.</p>
+	<p>
+		Laut den Nutzungsbestimmungen der GPL wird diese Software so ver&ouml;ffentlicht wie sie ist.<br />
+		Sie erhebt keinerlei Anspruch auf einwandfreie Funktion.<br />
+		Das Modul wurde erstellt, in der Hoffnung n&uuml;tzlich zu sein.<br />
+		Es besteht keinerlei Garantie auf einen einwandfreien Nutzen.<br />
+		Bitte lesen Sie die Nutzungsbedingungen f&uuml;r ausf&uuml;hrliche Informationen.
+	</p>
+	<br />
+</div>

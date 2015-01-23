@@ -1,0 +1,276 @@
+			<form method="post" class="cms_form" action="" id="reg4" enctype="multipart/form-data">
+            {field type="hidden" prefix=$prefix name='form_id' value='5'}
+			
+	
+			
+            <div class="form_loop f5">
+                <div title="{#f5_vardas#}">
+                    {field type="text" name="f5_vardas" prefix=$prefix label="0" required=1 value=$smarty.config.f5_vardas required=1}
+                </div>
+                <div title="{#f5_pavarde#}">
+                    {field type="text" name="f5_pavarde" prefix=$prefix label="0" required=1 value=$smarty.config.f5_pavarde required=1}
+                </div>
+                <div title="{#f5_amzius#}">
+                    {field type="text" name="f5_amzius" prefix=$prefix label="0" required=1 value=$smarty.config.f5_amzius required=1}
+                </div>
+                <div title="{#f5_telmob#}">
+                    {field type="text" name="f5_telmob" prefix=$prefix label="0" value=$smarty.config.f5_telmob required=1}
+                </div>
+                <div title="{#f5_adresas#}">
+                    {field type="text" name="f5_adresas" prefix=$prefix label="0" value=$smarty.config.f5_adresas required=1}
+                </div>
+                <div title="{#f5_detal#}" style="width:100%;">
+                    {field type="checkbox" name="f5_detal" prefix=$prefix label="0"}
+					{#f5_detal#}
+                </div>
+				<div class="more">
+					<div class="title">
+						{#f5_issilavinimas#}
+					</div>
+					<div class="sub-level mok_istaiga" style="width:100%;padding:0;">
+						<div title="{#f5_mok_ist#}">
+							{field type="text" name="f5_mok_ist[]" prefix=$prefix label="0" value=$smarty.config.f5_mok_ist}
+						</div>
+						<div title="{#f5_igyt_spec#}">
+							{field type="text" name="f5_igyt_spec[]" prefix=$prefix label="0" value=$smarty.config.f5_igyt_spec}
+						</div>
+					</div>
+					<div>{#f5_prid_dip#}</div>
+					<div>{#f5_prid_baig_darb#}</div>
+					<div title="{#f5_prid_dip#}">
+						{field type="file" name="f5_prid_dip" defval="#f5_prid_dip#" prefix=$prefix  required=1 label="0"}
+					</div>
+					<div title="{#f5_prid_baig_darb#}">
+						{field type="file" name="f5_prid_baig_darb" defval="#f5_prid_baig_darb#" prefix=$prefix  required=1 label="0"}
+					</div>	
+					
+					<div title="{#f5_prid_darb#}" style="width:100%;">
+						{field type="checkbox" name="f5_prid_mok" prefix=$prefix label="0"}
+						{#f5_prid_mok#}
+					</div>
+					<div style="width:100%;">
+						{#f5_kalbos#}
+					</div>
+					<div title="{#f5_lietuviu#}">
+						<div class="col-xs-12 language" >
+							{field type="checkbox" name="kalbos" prefix=$prefix label="0" defval=$smarty.config.f5_lietuviu} {#f5_lietuviu#}
+						</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_lietuviu" prefix=$prefix label="0" value=$smarty.config.f5_gimtoji}<br/>{#f5_gimtoji#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_lietuviu" prefix=$prefix label="0" value=$smarty.config.f5_puikiai}<br/>{#f5_puikiai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_lietuviu" prefix=$prefix label="0" value=$smarty.config.f5_gerai}<br/>{#f5_gerai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_lietuviu" prefix=$prefix label="0" value=$smarty.config.f5_patenkinamai}<br/>{#f5_patenkinamai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_lietuviu" prefix=$prefix label="0" value=$smarty.config.f5_silpnai}<br/>{#f5_silpnai#}</div>
+						<div class="col-xs-2" style="text-align:center;"></div>
+					</div>
+					<div title="{#f5_anglu#}">
+						<div class="col-xs-12 language" >
+							{field type="checkbox" name="kalbos" prefix=$prefix label="0" defval=$smarty.config.f5_anglu} {#f5_anglu#}
+						</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_anglu" prefix=$prefix label="0" value=$smarty.config.f5_gimtoji}<br/>{#f5_gimtoji#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_anglu" prefix=$prefix label="0" value=$smarty.config.f5_puikiai}<br/>{#f5_puikiai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_anglu" prefix=$prefix label="0" value=$smarty.config.f5_gerai}<br/>{#f5_gerai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_anglu" prefix=$prefix label="0" value=$smarty.config.f5_patenkinamai}<br/>{#f5_patenkinamai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_anglu" prefix=$prefix label="0" value=$smarty.config.f5_silpnai}<br/>{#f5_silpnai#}</div>
+					</div>
+					<div title="{#f5_rusu#}">
+						<div class="col-xs-12 language" >
+							{field type="checkbox" name="kalbos" prefix=$prefix label="0" defval=$smarty.config.f5_rusu} {#f5_rusu#}
+						</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_rusu" prefix=$prefix label="0" value=$smarty.config.f5_gimtoji}<br/>{#f5_gimtoji#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_rusu" prefix=$prefix label="0" value=$smarty.config.f5_puikiai}<br/>{#f5_puikiai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_rusu" prefix=$prefix label="0" value=$smarty.config.f5_gerai}<br/>{#f5_gerai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_rusu" prefix=$prefix label="0" value=$smarty.config.f5_patenkinamai}<br/>{#f5_patenkinamai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_rusu" prefix=$prefix label="0" value=$smarty.config.f5_silpnai}<br/>{#f5_silpnai#}</div>
+					</div>
+					<div title="{#f5_vokieciu#}">
+						<div class="col-xs-12 language" >
+							{field type="checkbox" name="kalbos" prefix=$prefix label="0" defval=$smarty.config.f5_vokieciu} {#f5_vokieciu#}
+						</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_vokieciu" prefix=$prefix label="0" value=$smarty.config.f5_gimtoji}<br/>{#f5_gimtoji#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_vokieciu" prefix=$prefix label="0" value=$smarty.config.f5_puikiai}<br/>{#f5_puikiai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_vokieciu" prefix=$prefix label="0" value=$smarty.config.f5_gerai}<br/>{#f5_gerai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_vokieciu" prefix=$prefix label="0" value=$smarty.config.f5_patenkinamai}<br/>{#f5_patenkinamai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_vokieciu" prefix=$prefix label="0" value=$smarty.config.f5_silpnai}<br/>{#f5_silpnai#}</div>
+					</div>
+					<div title="{#f5_kita#}">
+						<div class="col-xs-12 language" >
+							{field type="checkbox" name="kalbos" prefix=$prefix label="0" defval=$smarty.config.f5_kita}
+							<div title="{#f5_kita#}" style="display:inline-block;">
+								{field type="text" name="kalbos[]" prefix=$prefix label="0"  value=$smarty.config.f5_kita}
+							</div>
+							
+						</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_kita" prefix=$prefix label="0" value=$smarty.config.f5_gimtoji}<br/>{#f5_gimtoji#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_kita" prefix=$prefix label="0" value=$smarty.config.f5_puikiai}<br/>{#f5_puikiai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_kita" prefix=$prefix label="0" value=$smarty.config.f5_gerai}<br/>{#f5_gerai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_kita" prefix=$prefix label="0" value=$smarty.config.f5_patenkinamai}<br/>{#f5_patenkinamai#}</div>
+						<div class="col-xs-2" style="text-align:center;">{field type="radio" name="f5_kita" prefix=$prefix label="0" value=$smarty.config.f5_silpnai}<br/>{#f5_silpnai#}</div>
+					</div>
+					<div class="title">
+						{#f5_darbo_patirt#}
+					</div>
+					<div class="sub-level darbo_patirtis" style="width:100%;padding:0;">
+						<div title="{#f5_darbo_imone#}">
+							{field type="text" name="f5_darbo_imone[]" prefix=$prefix label="0" value=$smarty.config.f5_darbo_imone}
+						</div>
+						<div title="{#f5_darbo_truk#}">
+							{field type="text" name="f5_darbo_truk[]" prefix=$prefix label="0" value=$smarty.config.f5_darbo_truk}
+						</div>
+						<div title="{#f5_darbo_pareigos#}">
+							{field type="text" name="f5_darbo_pareigos[]" prefix=$prefix label="0" value=$smarty.config.f5_darbo_pareigos}
+						</div>
+						<div title="{#f5_darbo_atsakomybes#}">
+							{field type="text" name="f5_darbo_atsakomybes[]" prefix=$prefix label="0" value=$smarty.config.f5_darbo_atsakomybes}
+						</div>
+					</div>
+					<div title="{#f5_prid_darb#}" style="width:100%;">
+						{field type="checkbox" name="f5_prid_darb_2" prefix=$prefix label="0"}
+						{#f5_prid_darb#}
+					</div>
+					<div class="title">
+						{#f5_koks_domina#}
+					</div>
+					<div>
+						<div title="{#f5_inzinierius#}">
+							{field type="checkbox" name="f5_koks_domina" value=$smarty.config.f5_inzinierius prefix=$prefix label="0"}
+							{#f5_inzinierius#}
+						</div>
+						<div title="{#f5_vadybinis#}">
+							{field type="checkbox" name="f5_koks_domina" value=$smarty.config.f5_vadybinis prefix=$prefix label="0"}
+							{#f5_vadybinis#}
+						</div>
+						<div title="{#f5_vadovavimo#}">
+							{field type="checkbox" name="f5_koks_domina" value=$smarty.config.f5_vadovavimo prefix=$prefix label="0"}
+							{#f5_vadovavimo#}
+						</div>
+						<div title="{#f5_techninis#}">
+							{field type="checkbox" name="f5_koks_domina" value=$smarty.config.f5_techninis prefix=$prefix label="0"}
+							{#f5_techninis#}
+						</div>
+						<div>
+							{field type="checkbox" name="f5_koks_domina" value=$smarty.config.f5_kita prefix=$prefix label="0"}
+							<div title="{#f5_kita#}" style="display: inline-block;">{field type="text" name="f5_koks_domina[]" prefix=$prefix label="0" value=$smarty.config.f5_kita}</div>
+						</div>
+					</div>
+					<div class="title">
+						{#f5_kita#}
+					</div>
+					<div>
+						<div class="col-xs-4" >
+							{#f5_vair_pazym#}
+						</div>
+						<div class="col-xs-2" >
+							{field type="checkbox" name="pazymejimas" prefix=$prefix label="0" value="b"} B
+						</div>
+						<div class="col-xs-2" >
+							{field type="checkbox" name="pazymejimas" prefix=$prefix label="0" value="c"} C
+						</div>
+						<div class="col-xs-2" >
+							{field type="checkbox" name="pazymejimas" prefix=$prefix label="0" value="d"} D
+						</div>
+						<div class="col-xs-2" >
+							{field type="checkbox" name="pazymejimas" prefix=$prefix label="0" value="ne"} Neturiu
+						</div>
+
+					</div>
+					<div class="select">
+						{field type="select" name="seim_padetis" options=$padetys}	
+					</div>
+					<div title="{#f5_kit_igudziai#}">
+						{field type="text" name="f5_kit_igudziai" prefix=$prefix label="0" value=$smarty.config.f5_kit_igudziai}
+					</div>
+					<div title="{#f5_pag_atl#}">
+						{field type="text" name="f5_pag_atl" prefix=$prefix label="0" value=$smarty.config.f5_pag_atl}
+					</div>
+					<div>
+						{#f5_nuotrauka#}
+					</div>
+					<div>
+						{#f5_priseg_cv#}
+					</div>
+					<div title="{#f5_nuotrauka#}">
+						{field type="file" name="f5_nuotrauka" defval="#f5_nuotrauka#" prefix=$prefix  required=1 label="0"}
+					</div>	
+					<div title="{#f5_priseg_cv#}">
+						{field type="file" name="f5_priseg_cv" defval="#f5_priseg_cv#" prefix=$prefix  required=1 label="0"}
+					</div>
+					<div>
+						{#f5_kita_info#}
+					</div>
+					<div>
+						&#160;
+					</div>
+					<div title="{#f5_kita_info#}">
+						{field type="file" name="f5_kita_info" defval="#f5_kita_info#" prefix=$prefix  required=1 label="0"}
+					</div>	
+				</div>
+				<div style="width:100%;">
+					<div class="mgt xtt {$kalba}"><a href="#" class="ext_button xsd"><span class="right_ico ico_1">{#siusti#}</span></a></div>
+				</div>
+            </div>
+            </form>
+            {literal}
+            <script>
+                $(document).ready(function() {
+                    init_form = function(){
+                        $('form#reg4 input[type="text"],form#reg4 textarea').each(function(index, element) {
+                            var get_value = $(this).parent('*').attr('title');
+                            if($(this).val() == ''){
+                                $(this).val(get_value);
+                            };
+                        });
+                        $('form#reg4 input[type="text"], form#reg4 textarea').blur(function(){
+                            var get_value2 = $(this).parent('*').attr('title');
+                            if($(this).val() == '' || $(this).val() == $(this).parent('*').attr('title')){
+                                $(this).val(get_value2);
+                            };
+                        });
+                        
+                        $('form#reg4 input[type="text"], form#reg4 textarea').focus(function(){
+                            var get_value2 = $(this).parent('*').attr('title');
+                            if($(this).val() == $(this).parent('*').attr('title')){
+                                $(this).val('');
+                                $(this).removeClass('error')
+                            }
+                        });
+                        
+                        $('.xsd').click(function(event){
+							var valid_form = 1;
+                            event.preventDefault();
+                            $('form#reg4 input[type="text"],form#reg4 textarea').each(function(index, element) {
+                                var get_value = $(this).parent('*').attr('title');
+						
+                                if($(this).val() == $(this).parent('*').attr('title') && $(this).attr('required')){
+                                    $(this).val('').addClass('error');
+                                    valid_form = 0;
+									console.log($(this));
+                                }else{
+									
+                                    $(this).removeClass('error')
+                                }
+                            });
+                            if(valid_form == 0){
+                                $('form#reg4 input[type="text"],form#reg4 textarea').each(function(index, element) {
+                                    var get_value = $(this).parent('*').attr('title');
+                                    if($(this).val() == ''){
+                                        $(this).val(get_value);
+                                    };
+                                });
+							
+                            }else{
+								
+								$('.form_list input[type="text"], .form_list textarea').each(function(index, element) {
+									var get_value = $(this).parent('*').attr('title');
+									$(this).val(get_value);
+								});
+								/*alert('{/literal}{#issiusta_sekmingai#}{literal}');*/
+								//$('.form_list').hide().after('<div style="width:205px; text-align: center; color: white; padding: 70px 20px 0; font-size:18px">{#issiusta_sekmingai#}</div>');
+                                $(this).parents('form').submit();
+                            }
+                            
+                        });
+                    };
+                    init_form();
+                });
+            </script>
+            {/literal}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CSSMenu.js" server="w4.texus.lt" local="130664834318907147" remote="130664713800000000" Dst="1" />
+<file name="MenuManager.module.php" server="w4.texus.lt" local="130664834319027189" remote="130664713800000000" Dst="1" />
+<file name="action.addtemplate.php" server="w4.texus.lt" local="130664834319537105" remote="130664713800000000" Dst="1" />
+<file name="action.breadcrumbs.php" server="w4.texus.lt" local="130664834320137138" remote="130664713800000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834320217159" remote="130664713800000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834320767643" remote="130664713800000000" Dst="1" />
+<file name="action.deletetemplate.php" server="w4.texus.lt" local="130664834321377210" remote="130664713800000000" Dst="1" />
+<file name="action.edittemplate.php" server="w4.texus.lt" local="130664834321437211" remote="130664713800000000" Dst="1" />
+<file name="action.importtemplate.php" server="w4.texus.lt" local="130664834321987250" remote="130664713800000000" Dst="1" />
+<file name="action.items.php" server="w4.texus.lt" local="130664834322587356" remote="130664713800000000" Dst="1" />
+<file name="action.setcachable.php" server="w4.texus.lt" local="130664834322657282" remote="130664713800000000" Dst="1" />
+<file name="action.setdefault.php" server="w4.texus.lt" local="130664834323107427" remote="130664713800000000" Dst="1" />
+<file name="changelog.inc" server="w4.texus.lt" local="130664834323757463" remote="130664713800000000" Dst="1" />
+<file name="event.Core.ContentDeletePost.php" server="w4.texus.lt" local="130664834323767608" remote="130664713800000000" Dst="1" />
+<file name="event.Core.ContentEditPost.php" server="w4.texus.lt" local="130664834324257406" remote="130664713800000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834325657471" remote="130664713800000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834334518080" remote="130664713800000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834334607962" remote="130664713800000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834335077995" remote="130664713800000000" Dst="1" />
+</dwsync>

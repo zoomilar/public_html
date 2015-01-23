@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="class.cg_ecomm.php" server="w4.texus.lt" local="130664833749674479" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_cart.php" server="w4.texus.lt" local="130664833750274497" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_cartitem.php" server="w4.texus.lt" local="130664833750274497" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_cartitem_policy.php" server="w4.texus.lt" local="130664833750394510" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_company_address.php" server="w4.texus.lt" local="130664833751014798" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_order.php" server="w4.texus.lt" local="130664833751124553" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_package_generator.php" server="w4.texus.lt" local="130664833751504601" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_packaging_box.php" server="w4.texus.lt" local="130664833752054606" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_packaging_profile.php" server="w4.texus.lt" local="130664833752144718" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_productinfo.php" server="w4.texus.lt" local="130664833752144718" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_productinfo_subscription.php" server="w4.texus.lt" local="130664833752834814" remote="130664712600000000" Dst="1" />
+<file name="class.cg_ecomm_shipping_package.php" server="w4.texus.lt" local="130664833752834814" remote="130664712600000000" Dst="1" />
+<file name="class.cgecomm_smarty.php" server="w4.texus.lt" local="130664833752864656" remote="130664712600000000" Dst="1" />
+<file name="class.cgecomm_sourcetranslator_products.php" server="w4.texus.lt" local="130664833753444683" remote="130664712600000000" Dst="1" />
+<file name="interface.cg_ecomm_shipping_carrier.php" server="w4.texus.lt" local="130664833753504704" remote="130664712600000000" Dst="1" />
+<file name="interface.cg_ecomm_sourcetranslator.php" server="w4.texus.lt" local="130664833753514687" remote="130664712600000000" Dst="1" />
+<file name="interface.cgecomm_cart_module.php" server="w4.texus.lt" local="130664833754124811" remote="130664712600000000" Dst="1" />
+</dwsync>

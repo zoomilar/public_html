@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Languages.module.php" server="w4.texus.lt" local="130664834308346579" remote="130664713800000000" Dst="1" />
+<file name="action.add_edit.php" server="w4.texus.lt" local="130664834308346579" remote="130664713800000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834309206510" remote="130664713800000000" Dst="1" />
+<file name="action.default_values.php" server="w4.texus.lt" local="130664834309206510" remote="130664713800000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834309766664" remote="130664713800000000" Dst="1" />
+<file name="action.delete_langfile.php" server="w4.texus.lt" local="130664834310326574" remote="130664713800000000" Dst="1" />
+<file name="action.edit_langfile.php" server="w4.texus.lt" local="130664834310386580" remote="130664713800000000" Dst="1" />
+<file name="action.read_file.php" server="w4.texus.lt" local="130664834310886723" remote="130664713800000000" Dst="1" />
+<file name="action.refresh.php" server="w4.texus.lt" local="130664834311466638" remote="130664713800000000" Dst="1" />
+<file name="action.save_admin_prefs.php" server="w4.texus.lt" local="130664834311976701" remote="130664713800000000" Dst="1" />
+<file name="action.save_record.php" server="w4.texus.lt" local="130664834312036839" remote="130664713800000000" Dst="1" />
+<file name="function.admin_langfiles.php" server="w4.texus.lt" local="130664834312566702" remote="130664713800000000" Dst="1" />
+<file name="function.admin_prefstab.php" server="w4.texus.lt" local="130664834313186740" remote="130664713800000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834312576719" remote="130664713800000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834314546820" remote="130664713800000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834315206874" remote="130664713800000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834315256863" remote="130664713800000000" Dst="1" />
+<file name="standartiniai_vertimai.php" server="w4.texus.lt" local="130664834315256863" remote="130664713800000000" Dst="1" />
+</dwsync>

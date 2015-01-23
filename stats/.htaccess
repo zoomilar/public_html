@@ -1,0 +1,7 @@
+AuthName "destata.w4.texus.lt statistics"
+AuthType Basic
+AuthUserFile /home/w4.texus.lt/domains/destata.w4.texus.lt/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

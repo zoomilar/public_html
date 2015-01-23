@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ModuleManager.module.php" server="w4.texus.lt" local="130664834461055217" remote="130664713800000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834461665361" remote="130664713800000000" Dst="1" />
+<file name="action.display_install_results.php" server="w4.texus.lt" local="130664834461765422" remote="130664713800000000" Dst="1" />
+<file name="action.doinstall.php" server="w4.texus.lt" local="130664834461765422" remote="130664713800000000" Dst="1" />
+<file name="action.installmodule.php" server="w4.texus.lt" local="130664834462375311" remote="130664713800000000" Dst="1" />
+<file name="action.moduleabout.php" server="w4.texus.lt" local="130664834462515289" remote="130664713800000000" Dst="1" />
+<file name="action.moduledepends.php" server="w4.texus.lt" local="130664834462515289" remote="130664713800000000" Dst="1" />
+<file name="action.modulehelp.php" server="w4.texus.lt" local="130664834463085446" remote="130664713800000000" Dst="1" />
+<file name="action.modulelist.php" server="w4.texus.lt" local="130664834463205332" remote="130664713800000000" Dst="1" />
+<file name="action.setprefs.php" server="w4.texus.lt" local="130664834463205332" remote="130664713800000000" Dst="1" />
+<file name="function.admin_modules_tab.php" server="w4.texus.lt" local="130664834463935370" remote="130664713800000000" Dst="1" />
+<file name="function.admin_prefs_tab.php" server="w4.texus.lt" local="130664834464525405" remote="130664713800000000" Dst="1" />
+<file name="function.newversionstab.php" server="w4.texus.lt" local="130664834464675753" remote="130664713800000000" Dst="1" />
+<file name="function.search.php" server="w4.texus.lt" local="130664834464685418" remote="130664713800000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834465825556" remote="130664713800000000" Dst="1" />
+</dwsync>

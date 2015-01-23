@@ -1,0 +1,1 @@
+<a href="{$image}" target="_blank">{$image_name}</a>

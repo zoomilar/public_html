@@ -1,0 +1,1 @@
+{* Add code here that should appear in the metadata section of all new pages *}

@@ -1,0 +1,703 @@
+<div style="font-size:1.2em">
+	<br />
+	<p><strong style="color:red">WARNING! </strong><br />
+	If you uninstall the module without reverting all pages of type AdvancedContent back to the default contenttype your CMSms site won't work properly anymore!<br />
+	Make sure to set all pages of type AdvancedContent back to default content or delete them before uninstalling!</p>
+	<h3>What does this do?</h3>
+	<p>This module provides an additional contenttype when adding/editing pages.<br />
+	With this contenttype users can create custom input controls in backend to the add/edit page area by just using additional params in the page template when calling the content.<br />
+	That means you can display the content blocks as dropdowns, multiple select lists, checkboxes etc.<br />
+	You can also display the content blocks in different tabs or group them in fieldsets.</p>
+	<p>It also adds ability to grant access of pages or single blocks only to certain users of the 
+	FrontEndUsers module and hide the content, replace it by the login form of the 
+	FrontEndUsers module or redirect to a specified page showing the login form or 
+	just redirect without doing anything else if the frontend user is not logged in or does not belong to a certain group.</p>
+	Additionally pages can have a start and end date to activate/deactivate pages automatically.</p>
+	<p>The advanced content properties can be inherited from parent pages.</p>
+	<p>You can even use smarty logic in parameter values. That means you can use the 
+	result of a plugin, an udt or even a module or just the content of a global 
+	content block as parameter value to create dynamic values.</p>
+	<h3>How is it used?</h3>
+	<p>After installation the module settings can be found in "Extensions->AdvancedContent".</br >
+	Additionally you will have a new content type "AdvancedContent" available when adding/editing a page.</p>
+	<p><em><strong>Notice:</strong><br /> In some cases it is recomended to use the the {AdvancedContent} tag in the template instead of the default {content} tag. (case sensitive)<br />
+	e.g. the annoying message "Parameter [X] is not known by Module [Modulename]" can be avoided with it. (only affects the default content block at the moment)<br /><br />
+	If your start page is of type advanced content and you change this to be the default contenttype you need to set this page as start page again.<br /><br />
+	If you use smarty to process the parameter values consider the following:<br />
+	It is not recommended to use page related data such as {$content_id}, {title} or {$page_alias} etc. because these data does not exist if you <strong>create</strong> a page.<br />
+	Make sure that you do not use template vars, plugins or udts that needs data that is only available when the page is rendered via frontend.<br />
+	It is recommended to create a plugin or udt where you can decide what to return if there is no such data available.</em></p>
+	<p>To use the modules functions use this content type and optionally add the following parameters to your content tag in your page template...</p>
+	
+	<h3>Custom block types</h3>
+	<p>If you have decent programming skills you can extend the module with custom blocktypes using the directory /module_custom/AdvancedContent/lib/ in your CMSms root directory.<br />
+	If not exists create it but notice case sensitivity here.<br />
+	In this directory create a php file named like this: class.acBlockType_[name of the block type].php<br />
+	The name of the blocktype needs to be lower case only.<br />
+	In this file create a class named exactly like the part of the filename between 'class.' and '.php'.<br />
+	This class must extend a base class called 'acContentBlockBase'<br />
+	In the constructor of that class you need to call the parent constructor as the very first.<br />
+	Example...<br />
+	Filename: class.acBlockType_foo.php<br />
+	Content:</p>
+<pre><code>class acBlockType_foo extends acContentBlockBase
+{
+	function __construct($params = array())
+	{
+		parent::__construct($params);
+		
+		# custom properties of the block type defined by the tag params
+		$this->SetProperty('bar', isset($params['bar']) ? $params['bar'] : '');
+	}
+	
+	public function GetInput()
+	{
+		# create a custom input field for that block type
+		return 'Here should be a very special foo input.';
+	}
+}
+</code>
+</pre>
+<p><a href="../modules/AdvancedContent/doc/api/index.html" target="_blank">For more detailed information about available methods of a blocktype click here to read the genrated API documentation.</a><br />
+You may also take a look in /modules/AdvancedContent/lib/ to see some more detailed examples how blocktypes can be created.</p>
+	
+	<h3>What parameters are available?</h3>
+	<p>(all params are optional)</p>
+	<p><strong>Default params:</strong></p>
+	<p><em><a href="listtags.php?action=showpluginhelp&plugin=content&type=function">(see also tag help of the default {content} tag)</a></em></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>block</tt> (string)
+			<ul>
+				<li>
+					Allows you to have more than one content block per page. If multiple content tags are put on a template, that number of edit boxes will be displayed if the page is edited.<br />
+					e.g.: <code>{content block="Second Content block"}</code><br />
+					Now, if you edit a page there will ba a textarea called "Second Content block".<br />
+					<em><strong>Notice:</strong> The name of the content block may contain only letters, numbers, and underscores (no whitespaces, special chars, umlauts etc.). Otherwise it will be converted to a proper name (similar to the page alias).</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>wysiwyg</tt> (true/false)
+			<ul>
+				<li>If set to false, then a wysiwyg will never be used while editing this block. If true, then it acts as normal.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>oneline</tt> (true/false)
+			<ul>
+				<li>If set to true, then only one edit line will be shown while editing this block. If false, then it acts as normal. Only works when block parameter is used.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>default</tt> (string)
+			<ul>
+				<li>Default content when creating a new page.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>label</tt> (string)
+			<ul>
+				<li>Prompt for this content block. Possible values are any expression. If blank, the unconverted block name is used.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>assign</tt> (string)
+			<ul>
+				<li>
+					Assigns the content to a smarty parameter, which you can then use in other areas of the page, or use to test whether content exists in it or not.<br />
+					Example of passing page content to a User Defined Tag as a parameter:<br />
+					<code>{content assign=pagecontent}<br />
+					{table_of_contents thepagecontent="$pagecontent"}</code><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Advanced params:</strong></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>block_type</tt> (text,checkbox,dropdown,select_multiple,date,multi_input,slider,colorpicker) 
+			<ul>
+				<li>Allows you to specify what content control type is used in the back end.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>page_tab</tt> (string)
+			<ul>
+				<li>
+					This parameter sets the tab in which the content block is displayed in the backend.<br />
+					Possible values are "main" ( = Tab "Main Menu"), "options" ( = Tab "Options"), or any other arbitrary value<br />
+					<em>e.g. you can add a checkbox to the options tab or create new tabs</em>.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>block_tab</tt> (string)
+			<ul>
+				<li>With this parameter, the blocks within a page tab can be further divided into tabs or can be grouped together. Any expression can be used as a possible value.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>block_group</tt> (string)
+			<ul>
+				<li>With this parameter, multiple blocks can be grouped in a fieldset. Any expression can be used as a possible value.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>active</tt> (true/false)
+			<ul>
+				<li>
+					Allows you to disable a content block. Disabled content blocks won't be shown in backend as well as in frontend. (only works with {AdvancedContent} plugin)<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>editor_groups</tt> (string)
+			<ul>
+				<li>
+					A comma separated list of group names that are allowed to edit this block.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>editor_users</tt> (string)
+			<ul>
+				<li>
+					A comma separated list of user names that are allowed to edit this block.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Notice:</strong> if the params <tt>editor_users</tt> and <tt>editor_groups</tt> are empty the block may be edited by any user with sufficient permission to edit a page</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>feu_access</tt>
+			<ul>
+				<li>
+					A list of feu group ids separated by a comma.<br />
+					This shows the content block only to certain feu groups.<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>feu_action</tt> (true/false)
+			<ul>
+				<li>
+					Specify if the login form of the feu module will be shown or not.<br />
+					<em><strong>Notice:</strong> The login form will only be shown one time.<br />
+					If there are multiple blocks with limited feu_access and feu_action set to true only the first blocks login form will be shown and all other blocks will just be empty.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>feu_hide</tt> (true/false)
+			<ul>
+				<li>
+					Specify if a public block will be hidden if user is logged in.<br />
+					Default is false.<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>allow_none</tt> (true/false)
+			<ul>
+				<li>Set to true if the user may enter empty values. <br />If set to false and value is empty the default value of the param "default" will be used. <br />If set to true and block is of type image/file the option "none" (mode="dropdown") or a button to clear the selected file/image value (mode="filepicker") will be displayed.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>smarty</tt> (backend/frontend/both)
+			<ul>
+				<li>
+					Turn smarty processing of values on/off.<br />
+					If set to 'backend' any given value will be processed by the smarty engine only when the page is added/edited in backend.<br />
+					If set to 'frontend' any given value will be processed by the smarty engine only in when the page is rendere in frontend.<br />
+					If set to 'both' or 'true' any given value will be processed by the smarty engine in backend and in frontend.<br />
+					<em><strong>Notice: </strong> Consider that you cannot use the default smarty delimiters that are used in the template. This will cause smarty errors in frontend.<br />
+					So you need to use ::: as delimiter instead.<br /></em>
+					E.g.: <code>{content block="Categories" label="Select a category" block_type="dropdown" items=":::global_content name='categorylist':::" smarty="true"}</code>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>description</tt> (string) 
+			<ul>
+				<li>Allows you to add a detailed description to that block for your editors.</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>collapse</tt> (true/false)
+			<ul>
+				<li>
+					Set to true/false to display block in backend in collapsed/expanded mode by default.<br />
+					<em><strong>Notice:</strong> will be always false if no_collapse=true is used.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>no_collapse</tt> (true/false)
+			<ul>
+				<li>
+					Set to true to disable folding of blocks.<br />
+					<em><strong>Notice:</strong> if set to true param collapse is always false.</em><br />
+					<em>Blockgroups only regards the value of the param of the first block of that group.</em><br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>required</tt> (true/false)
+			<ul>
+				<li>
+					Set to true if this block may not be empty.<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Additional params of blocktype "text":</strong></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>cols</tt> (int) 
+			<ul>
+				<li>
+					Enter the with (in character columns) of the textarea. (only works with wysiwyg=false)<br />
+					Default is 80.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>rows</tt> (int) 
+			<ul>
+				<li>
+					Enter the height (in rows) of the textarea (only works with wysiwyg=false)<br />
+					Default is 15.
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>auto_resize</tt> (true/false) 
+			<ul>
+				<li>
+					Set to false to disable auto resizing of textareas when row count is reached.<br />
+					<em><strong>Notice:</strong> auto resizing only works with param wysiwyg=false</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Params of blocktype "checkbox":</strong> no additional parameters.<br />
+		<em><strong>Notice:</strong> use param default=1 to set if a checkbox is checked by default.</em>
+	</p>
+	<p><strong>Parameter of blocktype Colorpicker:</strong> no additional parameters</p>
+	<p><strong>Parameter of blocktype Slider:</strong> (<a href="http://blog.egorkhmelev.com/2009/11/jquery-slider-safari-style/" target="_blank">see also documentation of the used jquery slider plugin</a>)</p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>from</tt> (int) 
+			<ul>
+				<li>
+					start value
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>to</tt> (int) 
+			<ul>
+				<li>
+					end value
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>step</tt> (int) 
+			<ul>
+				<li>
+					amount of steps the slider changes the values
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>round</tt> (int) 
+			<ul>
+				<li>
+					digits after the comma
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>heterogeneity</tt> (string) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>dimension</tt> (string) 
+			<ul>
+				<li>
+					units after the value
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>limits</tt> (true/false) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>scale</tt> (string) 
+			<ul>
+				<li>
+					ToDo
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>skin</tt> (string) 
+			<ul>
+				<li>
+					the skin to use when rendering the slider
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>calculate</tt> (string) 
+			<ul>
+				<li>
+					a javascript function to calculate the displayed values
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>onstatechange</tt> (string) 
+			<ul>
+				<li>
+					a javascript function that will be processed when changing the value
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>callback</tt> (string) 
+			<ul>
+				<li>
+					a javascript function that will be processed after a value has been changed
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Params of blocktype "dropdown"/"select_multiple":</strong></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>items</tt> (string)
+			<ul>
+				<li>Item label(s) of the field(s) (separated by a delimiter - default is | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>values</tt> (string)
+			<ul>
+				<li>Value(s) of the items (separated by a delimiter - default is | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Notice:</strong> if there are less values than items the item labels will be used as values (and vise versa).</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>default</tt> (string)
+			<ul>
+				<li>
+					Preselected value(s) (separated by a delimiter - default is | (pipe))<br />
+				</li>
+			</ul>
+			<br />
+		</li>
+		<em><strong>Notice:</strong> Use the item <strong>values</strong> as default, not the item labels.</em><br /><br />
+		<li>
+			<em>(optional)</em> <tt>delimiter</tt> (string)
+			<ul>
+				<li>A sign or string that will be used to devide the items/values (default is | (pipe))</li>
+			</ul>
+			<br />
+		</li>
+		<li><em>(optional)</em> <tt>size</tt> (integer)
+			<ul>
+				<li>Height of content block in back end if <code>block_type="select_multiple"</code> is set. <em>(Default is number of items)</em></li>
+			</ul>
+			<br />
+		</li>
+		<li><em>(optional)</em> <tt>sortable</tt> (true/false) - select_multiple only
+			<ul>
+				<li>
+					If set to true the items won't be shown as a multiple select input with options but as a list of checkboxes that can be reordered.<br />Each row contains the item label and a checkbox with the item value.<br />
+					<em><strong>Notice:</strong> only the order of the <strong>selected</strong> items will be stored and always displayed on the top of the list when reloading the edit page.<br />
+					Unselected items will appended in that order they are defined in the template</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Params of blocktype "date":</strong></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>step_hours</tt> (int) 
+			<ul>
+				<li>
+					steps of hours in the clock dropdown. (default is 1)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>start_hour</tt> (int) 
+			<ul>
+				<li>
+					the start hour of the clock dropdown. (default is 0)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>end_hour</tt> (int) 
+			<ul>
+				<li>
+					the end hour of the clock dropdown (default is 12 or 23)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>show24h</tt> (true/false) 
+			<ul>
+				<li>
+					set to false if AM/PM is used. (default is true)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>step_minutes</tt> (int) 
+			<ul>
+				<li>
+					steps of minutes in the clock dropdown. (default is 10)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>start_minute</tt> (int) 
+			<ul>
+				<li>
+					the start minute of the clock dropdown. (default is 0)
+				</li>
+			</ul>
+			<br />
+		</li>
+			<em>(optional)</em> <tt>end_minute</tt> (int) 
+			<ul>
+				<li>
+					the end minute of the clock dropdown (default is 59)
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>show_clock</tt> (true/false) 
+			<ul>
+				<li>
+					set to false if no time dropdown should be displayed (default is true)<br />
+					<em><strong>Notice:</strong> If set to false 00:00 o'clock will be used</em>
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>date_format</tt> (string) 
+			<ul>
+				<li>
+					The strftime date format to show in frontend.
+				</li>
+			</ul>
+			<br />
+		</li>
+	</ul>
+	<p><strong>Params of blocktype "multi_input":</strong></p>
+	<ul>
+		<li>
+			<em>(optional)</em> <tt>inputs</tt> (csv of input ids you created in the backend) 
+			<br /><br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>value_delimiter</tt> (any string) 
+			<ul>
+				<li>
+					This defines a string that devides the values of the inputs of one multi_input when stored in the database.<br />
+					Default is "&lt;!-- multi_input_value_dellimiter --&gt;"
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<em>(optional)</em> <tt>input_delimiter</tt> (any string) 
+			<ul>
+				<li>
+					This defines a string that devides the multi_inputs you defined for this content block when stored in the database.<br />
+					Default is "&lt;!-- multi_input_dellimiter --&gt;"
+				</li>
+			</ul>
+			<br />
+		</li>
+		<li>
+			<p><strong>What is a multi_input for?</strong></p>
+			<p>A multi_input block is a content block that consists of different input fields. <br />
+			You can define them in the module administration using the same syntax you use in a template when defining a content block.<br />
+			Multi inputs can be used if you want to store different values in one content block and provide different input types for each values.<br />
+			This can be usefull if you want to create a dropdown to select a module to be shown in frontend and text input to define the module parameters.<br />
+			Example for a multi_input in page template:</p>
+			<pre>
+			<code>
+			{content block="module" label="Page modules" block_type="multi_input" inputs="module,module,module,module"}
+			</code>
+			</pre>
+			<p>Example for the definition of the multi_input named "module":</p>
+			<pre>
+			<code>
+			{content block="module selection" block_type="dropdown" items="|News|Gallery|Menu"}
+			{content block="module params" block_type="text" oneline=true}
+			</code>
+			</pre>
+			<p>What happens if you edit a page?</p>
+			<p>It will show you a fieldset with legend "Page modules". <br />
+			Inside this fieldset it shows the multi_input named "module" four times.<br />
+			That means you see four lines with two input fields. A dropdown and a text input.</p>
+			<p>What happens if you save a page?</p>
+			<p>The module stores the values as one single content property (aka contentblock) and separates the inputs by a given delimiter.<br />
+			Let's assume you select the News module four times with different module params like category="1", category="2", category="3", category="4".<br />
+			In the database it stores this string:</p>
+			<pre>
+			<code>
+			News&lt;!-- multi_input_value_delimiter --&gt;category="1"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="2"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="3"&lt;!-- multi_input_delimiter --&gt;<br />
+			News&lt;!-- multi_input_value_delimiter --&gt;category="4"
+			</code>
+			</pre>
+			<p>In your page template you can explode the content by the delimiters and call the selected modules.</p>
+			<p>Full Example:</p>
+			<pre>
+			<code>
+			{* define the content block *}
+			{content block="my_modules" block_type="multi_input" inputs="Module,Module,Module,Module" assign="modules"}
+			
+			{* explode block content in an array to get the input groups *}
+			{assign var=modules value="&lt;!-- multi_input_delimiter --&gt;"|explode:$modules}
+			
+			{* loop through the selected modules *}
+			{foreach from=$modules item="module"}
+				{if $module != ''}
+				
+					{* explode the input values in modulname and module parameters *}
+					{assign var=module_items value="&lt;!-- multi_input_value_delimiter --&gt;"|explode:$module}
+					
+					{if $module_items[0] != ''}
+					
+						{* call the module *}
+						{if isset($module_items[1])}
+							{eval var=$smarty.ldelim|cat:'cms_module module="'|cat:$module_items[0]|cat:'" '|cat:$module_items[1]|cat:$smarty.rdelim}
+						{else}
+							{eval var=$smarty.ldelim|cat:'cms_module module="'|cat:$module_items[0]|cat:'"'|cat:$smarty.rdelim}
+						{/if}
+						
+					{/if}
+					
+				{/if}
+			
+			{/foreach}
+			</code>
+			</pre>
+		</li>
+	</ul>
+	
+	<h3>Support</h3>
+	<p>This module does not include commercial support. However, there are a number of resources available to help you with it:</p>
+	<ul>
+		<li>The projects homepage is <a href="http://dev.cmsmadesimple.org/projects/content2/">http://dev.cmsmadesimple.org/projects/content2/</a></li>
+		<li>Additional discussion of this module may also be found in the CMS Made Simple Forums:<br />
+		<a href="http://forum.cmsmadesimple.de">http://forum.cmsmadesimple.de</a><br />
+		<a href="http://forum.cmsmadesimple.org">http://forum.cmsmadesimple.org</a></li>
+	</ul>
+	<br />
+	<p>Feel free report any kind of feedback.</p>
+	<h3>Copyright and License</h3>
+	<p>Copyright &copy; 2010-2012, Georg Busch (NaN). All Rights Are Reserved.</p>
+	<p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>
+	<p>
+		As per the GPL, this software is provided as-is.<br />
+		This program is distributed in the hope that it will be useful,<br />
+		but WITHOUT ANY WARRANTY; without even the implied warranty of<br />
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br />
+		See the GNU General Public License for more details.<br />
+		You should have received a copy of the GNU General Public License<br />
+		along with this program; if not, write to the Free Software<br />
+		Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA<br />
+		Or read it online: <a href="http://www.gnu.org/licenses/licenses.html#GPL">http://www.gnu.org/licenses/licenses.html#GPL</a><br />
+		Please read the text of the license for the full disclaimer.
+	</p>
+	<br />
+</div>

@@ -1,0 +1,103 @@
+<?php
+$lang['AdvancedContent']                = "Advanced Content";
+$lang['admindescription']               = 'Advanced content type with custom fields for the add/edit page panel and some additional functions.';
+$lang['advancedcontent_tabname']        = "Advanced Options";
+$lang['installed']                      = "Module AdvancedContent %s installed";
+$lang['uninstalled']                    = "Module AdvancedContent %s uninstalled";
+$lang['upgraded']                       = "Module AdvancedContent upgraded to %s. ATTENTION! Consider that contentblocks or multi_inputs are no longer arrays but objects. So update your multi_input templates. (See comment when editing multi_input templates)";
+$lang['postinstall']                    = "Module AdvancedContent %s installed.";
+$lang['postuninstall']                  = "Module AdvancedContent %s uninstalled.";
+$lang['confirmuninstall']               = "WARNING! Make sure all pages of advanced content are reverted to the default content type or deleted before removing this module! Otherwise your CMS installation might not work properly anymore! Do you really want uninstall the module AdvancedContent?";
+$lang['notice_duplicatecontent']        = "<em><strong>Notice:</strong> This block is used multiple times in template. You only see the first block here.</em>";
+$lang['error_basicattrib']              = "<em><strong>Notice:</strong> Cannot use basic content property name '%s' as value of param 'block'. <br />This block is disabled. Check your page template and chose a different value of param 'block'.</em>";
+$lang['error_expiredate']               = "End date must be later than start date.";
+$lang['inherit_from_parent']            = "Inherit from parent";
+$lang['none']                           = "none";
+$lang['invalid']                        = "invalid";
+$lang['invalid_block']                  = "<em><strong>Notice:</strong> Invalid block '%s'.<br />Check your page template.</em>";
+$lang['error_insufficient_blockparams'] = "<em><strong>Error:</strong> Insufficient params. <br />Missing param '%s' for block '%s'. Check your page template.</em>";
+$lang['yes']                            = "Yes";
+$lang['no']                             = "No";
+$lang['frontendaccess']                 = "Frontend access";
+$lang['redirectpage']                   = "Page to redirect to if no permission to access the page";
+$lang['showloginform']                  = "Show login form";
+$lang['registeredusers']                = "Registered users only";
+$lang['block']                          = "Block";
+$lang['useexpiredate']                  = "Use expire date";
+$lang['startdate']                      = "Start Date";
+$lang['enddate']                        = "End Date";
+$lang['blockcontent']                   = "Block Content";
+$lang['hide_deprecated']                = "Hide deprecated content type";
+$lang['prefsupdated']                   = "Preferences updated";
+$lang['success']                        = "Ok";
+$lang['error']                          = "Error";
+$lang['toggle_message']                 = "Hide this message";
+$lang['contentsettings']                = "Default AdvancedContent settings";
+$lang['redirectparams']                 = "URL params to append when redirecting";
+$lang['evaluatesmarty']                 = "Use smarty to process the params";
+$lang['error_loading_module']           = "<em><strong>Error:</strong> Could not load module '%s'. (Defined for block '%s' in your page template.)</em>";
+$lang['error_contentblock_support']     = "<em><strong>Error:</strong> Module '%s' does not support contentblocks. (Defined for block '%s' in your page template.)</em>";
+$lang['success_set_content_type']       = "All pages of type '%s' succesfully changed to '%s'";
+$lang['show_advancedcontent_options']   = "Show AdvancedContent options tab";
+$lang['display_settings']               = "%s display settings";
+$lang['save_collapse_status']           = "Save collpase status of %s";
+$lang['content_blocks']                 = "content blocks";
+$lang['block_message']                  = "content block message";
+$lang['block_groups']                   = "block groups";
+$lang['collapse_default']               = "Collapse %s by default";
+$lang['per_page']                       = "per page";
+$lang['per_template']                   = "per template";
+$lang['both1']                          = "template OR page ";
+$lang['both2']                          = "template AND page";
+$lang['content']                        = 'Content';
+$lang['advanced_content']               = 'Advanced Content';
+$lang['prefs']                          = 'Preferences';
+$lang['multi_input']                    = 'Multi Inputs';
+$lang['multi_input_tpl']                = 'Multi Input Templates';
+$lang['add_multi_input']                = 'Add new multi input';
+$lang['add_multi_input_tpl']            = 'Add new multi input template';
+$lang['input_id']                       = 'Input ID';
+$lang['input_fields']                   = 'Input fields';
+$lang['tpl_name']                       = 'Template name';
+$lang['error_template']                 = 'Template is a required field and may not be empty';
+$lang['error_input_fields']             = "Input fields is a required field and may not be empty.";
+$lang['error_input_id']                 = "No input id given or input id already exists.";
+$lang['error_input_id_exists']          = "Input ID is already in use. Choose a different one. (must be unique)";
+$lang['error_pageaccess']               = 'Invalid settings for page access. The page can never be displayed. Make sure that pages that will be hidden when logged in are public what means no user groups of the FrontEndUsers module may be selected.';
+$lang['multi_input_added']              = "Multi Input added.";
+$lang['multi_input_deleted']            = "Multi Input deleted.";
+$lang['multi_input_updated']            = "Multi Input updated.";
+$lang['multi_input_tpl_added']          = "Multi Input template added.";
+$lang['multi_input_tpl_updated']        = "Multi Input template updated.";
+$lang['multi_input_tpl_deleted']        = "Multi Input template deleted.";
+$lang['delete_selected']                = "Delete selected items";
+$lang['confirm_delete']                 = "Do you really want do delete this item?";
+$lang['confirm_delete_selected']        = "Do you really want do delete the selected items?";
+$lang['hide_content']                   = 'None (just hide the content)';
+$lang['hide_menu_item']                 = 'Hide from menu';
+$lang['loggedout']                      = 'if logged out';
+$lang['loggedin']                       = 'if logged in';
+$lang['aftercurrdate']                  = 'after current date';
+$lang['afterstartdate']                 = 'after start date';
+$lang['minutes']                        = 'minutes';
+$lang['hours']                          = 'hours';
+$lang['days']                           = 'days';
+$lang['weeks']                          = 'weeks';
+$lang['months']                         = 'months';
+$lang['years']                          = 'years';
+$lang['feu_params']                     = 'Parameters for the FrontEndUsers module';
+$lang['custom_params']                  = 'Custom URL params to append when redirecting';
+$lang['confirm_switchparams']           = "Do you really want to change the content property \'%s\' of all pages to \'%s\'?";
+$lang['success_switchparams']           = "All properties changed";
+$lang['custom_blocktypes']              = "Custom blocktypes";
+$lang['plugins']                        = "Plugins";
+$lang['help_tpl_vars']                  = '<p><strong>Template vars:</strong></p>
+<p><pre><code>{\$inputs}</code></pre> is an array that contains all defined input elements of that multi input block.<br />
+Each input element is an object that contains all its params. <br />
+See module help for more info.<br />
+To access the params use the following syntax:<br />
+</p>
+<pre><code>{foreach from=$inputs item=elm}
+	{$elm->GetProperty(\'label\')}:&nbsp;{$elm->GetInput()}&nbsp;
+{/foreach}</code></pre>';
+?>

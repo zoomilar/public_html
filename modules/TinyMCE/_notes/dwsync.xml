@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="TinyMCE.module.php" server="w4.texus.lt" local="130664834710919594" remote="130664715000000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834710929519" remote="130664714400000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834710989530" remote="130664714400000000" Dst="1" />
+<file name="action.filepicker.php" server="w4.texus.lt" local="130664834711629578" remote="130664714400000000" Dst="1" />
+<file name="action.saveadvanced.php" server="w4.texus.lt" local="130664834711639561" remote="130664714400000000" Dst="1" />
+<file name="action.saveplugins.php" server="w4.texus.lt" local="130664834711679640" remote="130664714400000000" Dst="1" />
+<file name="action.saveprofiles.php" server="w4.texus.lt" local="130664834712259829" remote="130664714400000000" Dst="1" />
+<file name="action.savesettings.php" server="w4.texus.lt" local="130664834712359597" remote="130664714400000000" Dst="1" />
+<file name="action.savestyles.php" server="w4.texus.lt" local="130664834712719625" remote="130664714400000000" Dst="1" />
+<file name="action.stylesheet.php" server="w4.texus.lt" local="130664834713409657" remote="130664714400000000" Dst="1" />
+<file name="action.tinyconfig.php" server="w4.texus.lt" local="130664834713409657" remote="130664714400000000" Dst="1" />
+<file name="event.Core.ContentPostRender.php" server="w4.texus.lt" local="130664834714069696" remote="130664714400000000" Dst="1" />
+<file name="filepicker.css" server="w4.texus.lt" local="130664834714539797" remote="130664714400000000" Dst="1" />
+<file name="filepicker.php" server="w4.texus.lt" local="130664834714669734" remote="130664714400000000" Dst="1" />
+<file name="function.admin_advanced.php" server="w4.texus.lt" local="130664834715159762" remote="130664714400000000" Dst="1" />
+<file name="function.admin_plugins.php" server="w4.texus.lt" local="130664834715639788" remote="130664714400000000" Dst="1" />
+<file name="function.admin_profiles.php" server="w4.texus.lt" local="130664834715789808" remote="130664714400000000" Dst="1" />
+<file name="function.admin_settings.php" server="w4.texus.lt" local="130664834716379829" remote="130664714400000000" Dst="1" />
+<file name="function.admin_styles.php" server="w4.texus.lt" local="130664834716889862" remote="130664714400000000" Dst="1" />
+<file name="function.admin_testarea.php" server="w4.texus.lt" local="130664834717039868" remote="130664714400000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834718829969" remote="130664714400000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834737271026" remote="130664714400000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834737941063" remote="130664714400000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834737971066" remote="130664714400000000" Dst="1" />
+<file name="stylesheet.php" server="w4.texus.lt" local="130664834738421098" remote="130664714400000000" Dst="1" />
+<file name="tinyconfig.php" server="w4.texus.lt" local="130664834741061250" remote="130664714400000000" Dst="1" />
+<file name="tinyconfig_gz.php" server="w4.texus.lt" local="130664834741721397" remote="130664714400000000" Dst="1" />
+<file name="tinylogo.png" server="w4.texus.lt" local="130664834742301312" remote="130664714400000000" Dst="1" />
+<file name="todo.php" server="w4.texus.lt" local="130664835096571596" remote="130664715000000000" Dst="1" />
+</dwsync>

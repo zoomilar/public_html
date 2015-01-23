@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="_c.dat" server="w4.texus.lt" local="130664833760205074" remote="130664712600000000" Dst="1" />
+<file name="CGExtensions.module.php" server="w4.texus.lt" local="130664833760235077" remote="130664712600000000" Dst="1" />
+<file name="_d.dat" server="w4.texus.lt" local="130664833760765106" remote="130664712600000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664833760865108" remote="130664712600000000" Dst="1" />
+<file name="action.deletetemplate.php" server="w4.texus.lt" local="130664833761375146" remote="130664712600000000" Dst="1" />
+<file name="action.do_addtemplate.php" server="w4.texus.lt" local="130664833761975179" remote="130664712600000000" Dst="1" />
+<file name="action.do_edittemplate.php" server="w4.texus.lt" local="130664833762035190" remote="130664712600000000" Dst="1" />
+<file name="action.edittemplate.php" server="w4.texus.lt" local="130664833762575217" remote="130664712600000000" Dst="1" />
+<file name="action.makedefaulttemplate.php" server="w4.texus.lt" local="130664833763185253" remote="130664712600000000" Dst="1" />
+<file name="action.setdefaulttemplate.php" server="w4.texus.lt" local="130664833763245249" remote="130664712600000000" Dst="1" />
+<file name="action.showmessage.php" server="w4.texus.lt" local="130664833763805281" remote="130664712600000000" Dst="1" />
+<file name="changelog.html" server="w4.texus.lt" local="130664833764385314" remote="130664712600000000" Dst="1" />
+<file name="class.cgextensions.tools.php" server="w4.texus.lt" local="130664833764465316" remote="130664712600000000" Dst="1" />
+<file name="countries.txt" server="w4.texus.lt" local="130664833764975344" remote="130664712600000000" Dst="1" />
+<file name="currencies.txt" server="w4.texus.lt" local="130664833765605439" remote="130664712600000000" Dst="1" />
+<file name="event.Core.ContentPostRender.php" server="w4.texus.lt" local="130664833765665386" remote="130664712600000000" Dst="1" />
+<file name="form_tools.php" server="w4.texus.lt" local="130664833769915631" remote="130664712600000000" Dst="1" />
+<file name="function.admin_cache_settings_tab.php" server="w4.texus.lt" local="130664833770435662" remote="130664712600000000" Dst="1" />
+<file name="function.admin_default_templates_tab.php" server="w4.texus.lt" local="130664833771035695" remote="130664712600000000" Dst="1" />
+<file name="function.admin_generaltab.php" server="w4.texus.lt" local="130664833771545723" remote="130664712600000000" Dst="1" />
+<file name="function.admin_graphicstab.php" server="w4.texus.lt" local="130664833772225758" remote="130664712600000000" Dst="1" />
+<file name="function.admin_sortablelists_tab.php" server="w4.texus.lt" local="130664833772705788" remote="130664712600000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664833772235761" remote="130664712600000000" Dst="1" />
+<file name="help.inc" server="w4.texus.lt" local="130664833773395826" remote="130664712600000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664833796187129" remote="130664712600000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664833796697217" remote="130664712600000000" Dst="1" />
+<file name="states.txt" server="w4.texus.lt" local="130664833797417203" remote="130664712600000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664833797487330" remote="130664712600000000" Dst="1" />
+</dwsync>

@@ -1,0 +1,93 @@
+{if $sekmingai}
+	<div style='padding: 20px 0px; color:  #cf0000; font-weight: bold'>{#send_success#}</div>
+{else}
+<form method="post" class="cms_form" action="" id="reg3" enctype='multipart/form-data'>
+	{field type="hidden" prefix=$prefix name='form_id' value='4'}
+	{field type="hidden" prefix=$prefix name='page_url' value="http://`$smarty.server.SERVER_NAME`/`$smarty.server.REQUEST_URI`"}
+	{field type="hidden" prefix=$prefix name='form_id' value='4'}
+	<div class="form_loop">
+		<div title="{#vardas#}">
+			{field type="text" name="vardas" prefix=$prefix label="0" required=1}
+		</div>
+		<div title="{#company#}">
+			{field type="text" name="company" prefix=$prefix label="0"}
+		</div>
+		<div title="{#el_pastas#}">
+			{field type="text" name="el_pastas" prefix=$prefix label="0" required=1}
+		</div>
+		<div title="{#telefonas#}">
+			{field type="text" name="telefonas" prefix=$prefix label="0" required=1}
+		</div>
+		<div class="full_width" title="{#comment#}">
+			{field type="textarea" name="comment" prefix=$prefix label="0"}
+		</div>
+		<div class="full_width" align="right">
+			<a class="ext_button yellow f_13 xsd3" href="#">
+				<span>{#siusti#}</span>
+			</a>
+		</div>
+	</div>
+</form>
+
+{literal}
+	<script>
+		$(document).ready(function() {
+			init_form3 = function() {
+				$('form#reg3 input[type="text"],form#reg3 textarea').each(function(index, element) {
+					var get_value = $(this).parent('*').attr('title');
+					if($(this).val() == ''){
+						$(this).val(get_value);
+					};
+				});
+				$('form#reg3 input[type="text"], form#reg3 textarea').blur(function(){
+					var get_value2 = $(this).parent('*').attr('title');
+					if($(this).val() == '' || $(this).val() == $(this).parent('*').attr('title')){
+						$(this).val(get_value2);
+					};
+				});
+				
+				$('form#reg3 input[type="text"], form#reg3 textarea').focus(function(){
+					var get_value2 = $(this).parent('*').attr('title');
+					if($(this).val() == $(this).parent('*').attr('title')){
+						$(this).val('');
+						$(this).removeClass('error')
+					}
+				});
+				
+				$('.xsd3').click(function(event){
+
+					event.preventDefault();
+					valid_form = 1;
+					$('form#reg3 input[type="text"],form#reg3 textarea').each(function(index, element) {
+						var get_value = $(this).parent('*').attr('title');
+						if($(this).val() == $(this).parent('*').attr('title') && $(this).attr('required')){
+							$(this).val('').addClass('error');
+							valid_form = 0
+						}else{
+							$(this).removeClass('error')
+						}
+					});
+					console.log(valid_form);
+					if (valid_form == 0){
+						$('form#reg3 input[type="text"],form#reg3 textarea').each(function(index, element) {
+							var get_value = $(this).parent('*').attr('title');
+							if($(this).val() == ''){
+								$(this).val(get_value);
+							};
+						});
+					} else {
+						$('.form_list input[type="text"], .form_list textarea').each(function(index, element) {
+							var get_value = $(this).parent('*').attr('title');
+							$(this).val(get_value);
+						});
+						
+						$(this).parents('form').submit();
+					}
+					
+				});
+			};
+			init_form3();
+		});
+	</script>
+{/literal}
+{/if}

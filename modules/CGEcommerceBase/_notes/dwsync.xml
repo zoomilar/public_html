@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CGEcommerceBase.module.php" server="w4.texus.lt" local="130664833742464066" remote="130664712600000000" Dst="1" />
+<file name="_c.dat" server="w4.texus.lt" local="130664833742604064" remote="130664712600000000" Dst="1" />
+<file name="_d.dat" server="w4.texus.lt" local="130664833743204102" remote="130664712600000000" Dst="1" />
+<file name="action.admin_save_myinfo.php" server="w4.texus.lt" local="130664833743784130" remote="130664712600000000" Dst="1" />
+<file name="action.admin_save_policy.php" server="w4.texus.lt" local="130664833743914228" remote="130664712600000000" Dst="1" />
+<file name="action.admin_save_prefs.php" server="w4.texus.lt" local="130664833744434289" remote="130664712600000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664833744974198" remote="130664712600000000" Dst="1" />
+<file name="changelog.inc" server="w4.texus.lt" local="130664833745044202" remote="130664712600000000" Dst="1" />
+<file name="function.admin_cart_tab.php" server="w4.texus.lt" local="130664833745684559" remote="130664712600000000" Dst="1" />
+<file name="function.admin_general_tab.php" server="w4.texus.lt" local="130664833745784277" remote="130664712600000000" Dst="1" />
+<file name="function.admin_myinfo_tab.php" server="w4.texus.lt" local="130664833746414279" remote="130664712600000000" Dst="1" />
+<file name="function.admin_packaging_tab.php" server="w4.texus.lt" local="130664833746454402" remote="130664712600000000" Dst="1" />
+<file name="function.admin_payments_tab.php" server="w4.texus.lt" local="130664833746464283" remote="130664712600000000" Dst="1" />
+<file name="function.admin_policy_tab.php" server="w4.texus.lt" local="130664833747014346" remote="130664712600000000" Dst="1" />
+<file name="function.admin_promotions_tab.php" server="w4.texus.lt" local="130664833747114437" remote="130664712600000000" Dst="1" />
+<file name="function.admin_shipping_tab.php" server="w4.texus.lt" local="130664833747114437" remote="130664712600000000" Dst="1" />
+<file name="function.admin_suppliers_tab.php" server="w4.texus.lt" local="130664833747634350" remote="130664712600000000" Dst="1" />
+<file name="function.admin_taxes_tab.php" server="w4.texus.lt" local="130664833747804362" remote="130664712600000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664833754174726" remote="130664712600000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664833754644759" remote="130664712600000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664833755254799" remote="130664712600000000" Dst="1" />
+<file name="skeleton.php" server="w4.texus.lt" local="130664833755304793" remote="130664712600000000" Dst="1" />
+</dwsync>

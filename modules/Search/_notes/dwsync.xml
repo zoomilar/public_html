@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="PorterStemmer.class.php" server="w4.texus.lt" local="130664834665266899" remote="130664714400000000" Dst="1" />
+<file name="Search.module.php" server="w4.texus.lt" local="130664834665396905" remote="130664714400000000" Dst="1" />
+<file name="action.default.php" server="w4.texus.lt" local="130664834665927017" remote="130664714400000000" Dst="1" />
+<file name="action.defaultadmin.php" server="w4.texus.lt" local="130664834666057066" remote="130664714400000000" Dst="1" />
+<file name="action.dosearch.php" server="w4.texus.lt" local="130664834666057066" remote="130664714400000000" Dst="1" />
+<file name="action.keywords.php" server="w4.texus.lt" local="130664834666636981" remote="130664714400000000" Dst="1" />
+<file name="action.updateresulttemplate.php" server="w4.texus.lt" local="130664834666767177" remote="130664714400000000" Dst="1" />
+<file name="action.updatesearchtemplate.php" server="w4.texus.lt" local="130664834666767177" remote="130664714400000000" Dst="1" />
+<file name="index.html" server="w4.texus.lt" local="130664834667487037" remote="130664714400000000" Dst="1" />
+<file name="changelog.inc" server="w4.texus.lt" local="130664834667527106" remote="130664714400000000" Dst="1" />
+<file name="function.admin_statistics_tab.php" server="w4.texus.lt" local="130664834667537031" remote="130664714400000000" Dst="1" />
+<file name="method.install.php" server="w4.texus.lt" local="130664834685328061" remote="130664714400000000" Dst="1" />
+<file name="method.uninstall.php" server="w4.texus.lt" local="130664834685358113" remote="130664714400000000" Dst="1" />
+<file name="method.upgrade.php" server="w4.texus.lt" local="130664834685888113" remote="130664714400000000" Dst="1" />
+<file name="search.tools.php" server="w4.texus.lt" local="130664834686498144" remote="130664714400000000" Dst="1" />
+</dwsync>
